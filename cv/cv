@@ -1,0 +1,17 @@
+\documentclass[10pt]{article}
+\usepackage[margin=3cm]{geometry}
+\title{\bfseries\Huge Tom T. Texblog}
+\author{texblog+cv@gmail.com}
+\date{}
+\begin{document}
+\begin{minipage}{0.65\textwidth}
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\flushright{\rule{3.5cm}{4.5cm}}
+\end{minipage}
+\end{document}

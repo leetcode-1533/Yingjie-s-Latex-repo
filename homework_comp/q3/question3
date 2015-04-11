@@ -1,0 +1,47 @@
+Answers for questions a,b:
+
+If we assume U is in the format of the following:[a1;a2;a3;a4;a5;v], the F is as following:
+
+[k*u(6)*u(1)/G + u(1) - a0;
+    k*u(6)*u(2)/G + u(2) - u(1);
+    k*u(6)*u(3)/G + u(3) - u(2);
+    k*u(6)*u(4)/G + u(4) - u(3);
+    k*u(6)*u(5)/G + u(5) - u(4);
+    k*u(6)*a6/G + a6 - u(5)];  
+
+And the jacobian matrix is as following :
+
+
+jc = [1,0,0,0,0,k*u(1)/G;
+    -1,1+k*u(6)/G,0,0,0,k*u(2)/G;
+    0,-1,1+k*u(6)/G,0,0,k*u(3)/G;
+    0,0,-1,1+k*u(6)/G,0,k*u(3)/G;
+    0,0,0,-1,1+k*u(6)/G,k*u(5)/G;
+    0,0,0,0,-1,k*a6/G];
+
+Because I will use the above two in the coming questions, the expression written above was actually working codes in the matlab files called :q3c.m and cal_j.m
+
+
+Answer for question c:
+
+In talking about the initial starting point I used the tutor's called "continuation.m" to do a Homotopy Continuation assumption. And the stating point for solving the Homotopy continuation problem was a naive assumption, that a6->a0 is in decreasing order from 6 all the way down to 0 (and in here I assumed a5 to a1 as 5,4,3,2,1 respectively), and I picked up a random number 30 for the assumption of the size of V.( All this was organized in the file called q3.m).
+
+The solution is as following:
+
+x =
+
+    4.1942
+    2.9318
+    2.0494
+    1.4326
+    1.0014
+  125.5833
+
+Which means a1 to a5 are equal to 4.1942 and 2.9318 and 2.0494 and 1.4326 and 1.0014 respectively and the size of v should be 125.5833). As we can see, a6>a5>a4>a3>a2>a1, so it is correct in terms of the decreasing order of the concentration. ( I recored the convergence data in the file called q3_convergence)
+
+
+Answer for question d:
+
+Looking back at the question itself, it said that "a series of n continuously-stirred reactor vessels, each of volume V". So the physics meaning of the v is the size of the reactor vessels and as n=6 there are 6 of them and each of them is of the size of 125.5833. And the unit of the v can be conducted from the formula beta = k*v/G. On condition that we knew beta and k and G's unit already.
+
+

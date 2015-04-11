@@ -1,0 +1,62 @@
+The Matlab code for the nonlinear function is called: compressible.m
+
+In solving question 1(a), I used the matlab function called fzero and the simple Newton algorithm separately.
+
+        In using fzero:
+                
+                The convergence data file is called: fzero_q1a. In general the solution is: p1=43.806 and the function solver fzero is confident about the result.
+
+        In using simple Newton algorithm:
+
+                This involving the using of the following matlab files:
+                        compressible.m: Calculating the function value when t is fixed at 4.026.
+                        fin_num_j.m: Using forward Eular formula to numerical calculate the function differential. The step length is set at 10*sqrt(eps)               
+                        mynewton.m: Using newton method to calculate the root.
+                The convergence data file is called newton_q1a. In general the solution is 43.806.
+
+
+        The comparison:
+
+        1.Using tic&toc in matlab, the time costing is as following:( Testing for 10 times, the script is called timer_newton_a.m and timer_fzero_a.m seperately)
+                
+                fzero:0.0020s
+
+                newton:0.0007057s
+
+        2. By reviewing the output file, we can see that newton method use 6 iterations and fzero use 8 iteration.
+        3. At the same time, we can see the norm of the function at the end has been sufficiently small.(Around 1e-10)
+
+        In summery, although this time newton method is better than fzero() but I think fzero() if well modified and the time delay just means fzero has to do all the other considerations before iteration. So I believe fzero is still better than newton method in large scale question.
+
+
+In solving question 1(b), I used the similar methods. We can see from the equation expression that the large p1 the smaller d. From the consideration of minimizing the cost, p1 is set at 24.7.
+
+        In using fzero:
+
+                The convergence data is called fzero_q1b. The final result is d = 6.2455 and function is confident about its result
+
+        In using newton method:
+                
+                We involve using the same files used at the question a (the file called compressible.m is modified)
+
+        The convergence data file is called newton_q1b. In general the solution is 6.2455
+
+        The comparison:
+
+        1. We use the same method and after testing if for 10 times and the average value is as following:
+
+                fzero: 0.0024s
+
+                newton: 0.0011s
+
+        2. By reviewing the output file, newton method used 7 iterations and fzero used 9 iterations
+        3. The result satisfies the function nicely while it reduces the evaluation value down to a significantly small value.
+
+        The summery is the same. In simple situation the newton method costs less time.
+
+
+
+
+
+
+

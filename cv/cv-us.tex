@@ -1,0 +1,103 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+%%pdf:
+\usepackage{pdfpages}
+%% etc:
+\usepackage{xspace}
+\newcommand*{\eg}{e.g.\@\xspace}
+\newcommand*{\ie}{i.e.\@\xspace}
+
+\makeatletter
+\newcommand*{\etc}{%
+    \@ifnextchar{.}%
+        {etc}%
+        {etc.\@\xspace}%
+}
+\makeatother
+
+%% ModernCV themes
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\renewcommand{\familydefault}{\sfdefault}
+\nopagenumbers{}
+
+
+%% Character encoding
+\usepackage[utf8]{inputenc}
+
+%% Adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+%% Personal data
+\firstname{Yingjie}
+\familyname{Luan}
+%\title{Resumé title (optional)}
+\address{School of Electronic and Electrical Engineering, University of Leeds}{LS6 2EQ}
+\mobile{07404~645~513}
+%\phone{+2~(345)~678~901}
+%\fax{+3~(456)~789~012}
+\email{1275963@gmail.com}
+\homepage{y1275963.github.com}
+%\homepage{github.com/y1275963}
+\photo[100pt][0.5pt]{photo.jpg}
+
+%%------------------------------------------------------------------------------
+%% Content
+%%------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+
+\section{Education}
+\cventry{2014--Current}{Study Abroad}{University Of Leeds}{United Kingdom}{}{Current School}  % arguments 3 to 6 can be left empty
+
+\cventry{2012--Current}{Bachelor of Electronic and Electrical Engineering}{Lanzhou University}{China}{}{Home School}  % arguments 3 to 6 can be left empty
+
+\cventry{2009--2012}{High School}{Tai Shan Foreigner Language School}{China}{}{High School, 10A in Academic Proficiency Test, 619/750 in National Higher Education Entrance Examination }  % arguments 3 to 6 can be left empty
+
+\section{Experience}
+
+
+\cventry{2014--2014}{Sponsored Summer School}{University of California Berkeley}{United States}{}{Summer Camp}  % arguments 3 to 6 can be left empty
+
+\cventry{2013--2013}{Summer School}{University of Manitoba}{Canada}{}{Intensive English Program}  % arguments 3 to 6 can be left empty
+
+\cventry{2013--2013}{Group Member}{Mathematics Laboratory}{Lanzhou University}{}{ Working with master students and PhDs from Math Departments to learn various Artificial Intelligent Systems \textit{i.e. BP, SVM}}
+
+\cventry{2012--2014}{Group Member}{Open Source Society}{Lanzhou University}{}{ Various Software development skills learning }
+
+
+
+
+\section{Projects}
+\cvline{Qt, C++}{ Laboratory Management System - MVC : \href{https://github.com/y1275963/FinalTerm}{https://github.com/y1275963/FinalTerm}}
+
+\cvline{Matlab}{Vectorize Images- Basel Curve Optimization : \href{https://github.com/y1275963/outline-exploiter}{https://github.com/y1275963/outline-exploiter}}
+
+\cvline{Python}{ Web scrapper and Data Analyze : \href{https://github.com/y1275963/working}{https://github.com/y1275963/working}}
+
+\cvline{C}{ Calculator - Embedded System On ARM :  \href{https://github.com/y1275963/pro_2}{https://github.com/y1275963/pro\_2}}
+
+%\cvline{C++, Python}{ OJ System : \href{https://oj.leetcode.com/problems/}{leetcode} : \href{https://github.com/y1275963/leet}{https://github.com/y1275963/leet}}
+
+
+\section{Language}
+\cvlanguage{Chinese}{Native}{}
+\cvlanguage{English}{Fluent}{IELTS 6.5, 2013}
+
+
+\section{Computer Skills}
+\cvline{Basic}{\small Sql, VHDL, Bash}
+\cvline{Intermediate}{\small Qt, C++, C, Python}
+\cvline{Expert}{\small Matlab( For Scientific Computation)}
+\cvline{Tools}{\small \LaTeX, Docker, Git, Vim, Linux, Apache}
+
+\section{Qualities}
+\cvline{Personal Skills:}{Strong Self-learning ability, Systematically trained in Algorithm and Data Structure}
+\cvline{Experience With:}{ Artificial Intelligence System, Web Scrapper, Embedded System \etc}
+
+\bibliography{publications}
+\includepdf[pages=-]{score}
+\includepdf[pages=-]{ielts}
+\includepdf[pages=-]{scholarship}
+\includepdf[pages=-]{comp.pdf}
+\end{document}

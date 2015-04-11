@@ -1,0 +1,15 @@
+mynewton(@compressible,@fin_num_j,25,1e-7,30)
+   k      x_k   F(x_k)
+   0       25 -1.35e+06
+   1    37.73 -3.78e+05
+   2    43.61 -1.18e+04
+   3    43.81    -8.66
+   4    43.81 -4.91e-06
+   5    43.81 4.66e-10
+Converged
+
+ans =
+
+   43.8060
+
+diary off

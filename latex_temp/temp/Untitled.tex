@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+
+\begin{document}
+
+\begin{eqnarray*}
+h(z)&=&\frac{3}{1+z^{-1}-2z^{-2}}\\
+&=&\frac{3}{(1+2z^{-1})(1-z^{-1})}
+\end{eqnarray*}
+Applying the decomposition formula:
+\begin{eqnarray*}
+h(z)&=&\frac{3}{(1+2z^{-1})(1-z^{-1})}\\
+&=&\frac{2}{1+2z^{-1}}+\frac{1}{1-z^{-1}}
+\end{eqnarray*}
+
+
+Because the system is a casual system, we then can apply the inverse z-transform table \\
+
+Refer to the table:
+for
+ $$\frac{1}{1+2z^{-1}}$$
+
+ the related h[n] should be:
+ $$(-2)^nu[n]$$
+ 
+for $$\frac{1}{1-z^{-1}}$$
+
+the related h[n] should be:
+$$u[n]$$\\
+
+Finally, according to linear property:
+\begin{eqnarray*}
+h(z)&=&\frac{3}{1+z^{-1}-2z^{-2}}\\
+h(z)&=&\frac{3}{(1+2z^{-1})(1-z^{-1})}\\
+h(z)&=&\frac{2}{1+2z^{-1}}+\frac{1}{1-z^{-1}}\\
+h[n]&=&2*(-2)^nu[n]+u[n]
+\end{eqnarray*}
+
+
+
+
+
+
+
+
+
+\end{document}

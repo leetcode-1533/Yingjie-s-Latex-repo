@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{soul}
+\usepackage{enumerate}
+
+\begin{document}
+
+\ul{The following section only involves calculation and some analytical explanation which requires some background reading. You may use the list references given. }\\
+
+\textbf{5.5}   Show how you would determine the inductance value so that a current ripple magnitude in the lamp is less than 15\% of its rated value, at chopping frequency of 15 kHz. \emph{(Include any comments to support your answer)}
+
+\begin{center}
+\begin{flushleft} Because: \end{flushleft}
+ 
+$$\Delta i = (1-k)\frac{T_p*V_o}{L}$$\\
+\begin{flushleft} Where, \end{flushleft}
+$$i = V_o / R_L$$\\
+\begin{flushleft} Thus we can have, \end{flushleft}
+\begin{eqnarray*}
+\frac{\Delta i}{i} &=& \frac{(1-k)\frac{T_p*V_o}{L}}{\frac{V_o}{R_L}}\\
+\frac{\Delta i}{i} &=& (1-k)*\frac{T_p*R_L}{L}\\
+\frac{\Delta i}{i} &=& (1-k)*\frac{R_L}{L*F}
+\end{eqnarray*}
+\begin{flushleft} Thus, \end{flushleft}\begin{equation} \label{eq:solve}
+L = (1-k)*\frac{R_L}{F*\frac{\Delta i}{i}}\end{equation}
+
+And We have: $F = 15khz$, $\frac{\Delta i}{i}=15\%$, $k=0.25$. Knowing the R value, we then can calculate the L value.
+
+
+\end{center}
+
+\textbf{5.6} On the basis of the derived relationship between the inductance and the frequency, state: 
+\begin{enumerate}[(a)]
+\item how the chopping frequency affects the size of the filtering inductor for a give average current;  \\
+
+As we can see from the formula \ref{eq:solve}, That when keeping $\frac{\Delta i}{i}$ and $k$ as a constant,  The higher the F the lower the L. Thus, at a certain degree, increasing the chopping frequency will help decreasing the size the inductor.
+\item what causes the limitation on the switching frequency.\\
+
+First, the semi-conductor itself won't allow the chopping frequency to increase without limitation. And this true especially because we are right now dealing with the power electronics .\\
+Second, the switching losses is not neglectible. There are power losses along with each switching.
+\end{enumerate}
+
+
+ 
+
+\end{document}

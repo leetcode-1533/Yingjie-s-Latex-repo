@@ -1,0 +1,29 @@
+[x,f,flag]=fzero(@compressible,[4 8],optimset('Display','iter'))
+ 
+ Func-count    x          f(x)             Procedure
+    2               4  -1.39053e+06        initial
+    3          5.7055       -428587        interpolation
+    4         6.32373       67528.9        interpolation
+    5         6.23958      -5036.72        interpolation
+    6         6.24542       -52.268        interpolation
+    7         6.24548    0.00073734        interpolation
+    8         6.24548   -6.0536e-09        interpolation
+    9         6.24548             0        interpolation
+ 
+Zero found in the interval [4, 8]
+
+x =
+
+    6.2455
+
+
+f =
+
+     0
+
+
+flag =
+
+     1
+
+diary off

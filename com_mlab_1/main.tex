@@ -1,0 +1,56 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{fullpage}
+
+\usepackage{listings} % Coding Syntax coloring
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+\usepackage{amsmath}
+\usepackage{textcomp}
+
+\lstset{
+     backgroundcolor=\color{lbcolor},
+     tabsize=4,
+     rulecolor=,
+     language=matlab,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+\usepackage{fancyhdr,graphicx,lastpage}% http://ctan.org/pkg/{fancyhdr,graphicx,lastpage}
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  \fancyhead[R]{\includegraphics[scale=0.5]{logo.png}}% Right header
+  \fancyhead[L]{\textbf{School of Electronic and Electrical Engineering}}
+  %\fancyfoot[L]{Name Firstname - v1.0 \\  Date}% Left footer
+  \fancyfoot[R]{\thepage\  / \pageref{LastPage}}% Right footer
+}
+\pagestyle{plain}% Set page style to plain.
+
+
+\begin{document}
+\title{ELEC2430 Matlab Assignment 1}
+\subtitle{ Amplitude Modulation System and spectrum analysis}
+\author{Yingjie Luan}
+\maketitle
+
+\tableofcontents
+
+
+
+\end{document}

@@ -6,7 +6,7 @@ My initial idea is that I create a branch per document and then I merge it back 
 
 I hope it can help some one in need, and I specifically included all the images and files just to make it an 'one-click' compiling process.
 
-At the main time, I opened my related [Evernote notebook](https://www.evernote.com/pub/y1275963/latex) and once again I hope I can help someone just like those who helped me.
+At the main time, I released my related [Evernote notebook](https://www.evernote.com/pub/y1275963/latex) and once again I hope I can help someone just like those who helped me.
 
 My personal experience with *Latex*:
 

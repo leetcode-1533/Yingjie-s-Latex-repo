@@ -1,6 +1,8 @@
 \documentclass[11pt]{scrartcl}
 \usepackage{fullpage}
 
+\usepackage{longtable}
+
 \usepackage{cite}
 \usepackage{listings} % Coding Syntax coloring
 \usepackage{color}
@@ -213,12 +215,12 @@ Below is the supported monitor method to get the data from the board.
          \item LDE 7 is on, 6 is off, Status 10:
          Meaning that the system is delayed, to moderate the refresh rate down to around 50hz.
          \item LED 7 is off, 6 is on, Status 01:
-         Meaning that the system is drawing the wave from the Ram according to the sampled signal.
+         Meaning that the system is drawing the wave from the RAM according to the sampled signal.
          \item LED 7 is off, 6 is off, Status 00:
          Meaning that the system is clean the screen by redrawing a regular grid background.
          
     \end{itemize}  
-      In reality, as we can see from the image above, because the system is delayed for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(Status 10).
+      In reality, as we can see from the image above, because the system is the status of delay for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(Status 10).
       \item Switch indicator
       
       The switch indicator is used to indicator which switch is on or off, as we can see from the image below:
@@ -290,7 +292,7 @@ The counter is the building block of the entire project and it is used throughou
      \item In delay process:
      Counter is used to crate a delay to lower down the refresh rate.
      \item In Sampling process and AD process:
-    Counter is used to provide the Ram with memory index. A counter in sampling process also support downsampling the Ram.
+    Counter is used to provide the RAM with memory index. A counter in sampling process also support downsampling the RAM.
 \end{itemize}
 
 To connect counters with status machine, all the counter is implemented 2 input signals and 1 output signal:
@@ -300,6 +302,7 @@ To connect counters with status machine, all the counter is implemented 2 input 
     \item finished: indicate if the counter has finished one round or not.
 \end{itemize}
 \subsubsection{The basic Counter}
+\label{sec:bascount}
 All the counters are built on top the basic structure from the one blow:
 
 \begin{lstlisting}[language=Verilog]
@@ -328,9 +331,11 @@ end
 By setting the value of the maximum value of the counter, we can manage to let the counter counts from 0 to its max value according to the clock. And the finished signal is emitted right at the moment the counter reach its maximum value.
 
 \subsubsection{Jumping Counter}
-The downsampling is implemented by downsampling the output of the Ram instead of downsampling the output from the AD convert from the simple fact the the system can endure a little bit more delay.(Moreover, an explicit delay is implemented).
+\label{sec:jumcount}
 
-To support the downsampling, we simply change the increment factor of the counter and hence we change the Ram address we are going to access, below is an example of the jumping counter:
+The downsampling is implemented by downsampling the output of the RAM instead of downsampling the output from the AD convert from the simple fact the the system can endure a little bit more delay.(Moreover, an explicit delay is implemented).
+
+To support the downsampling, we simply change the increment factor of the counter and hence we change the RAM address we are going to access, below is an example of the jumping counter:
  
 \begin{lstlisting}[language=Verilog]
 input [1:0] time_division;
@@ -354,6 +359,8 @@ begin
 end
 \end{lstlisting}
 \subsubsection{Counter on top of the Counter}
+\label{sec:coucount}
+
 To support providing $(x,y)$ coordinators for the VGA module while cleaning the whole screen, a Y counter is built on top of a X counter, blow is the example:
 \begin{lstlisting}[language=Verilog]
 
@@ -396,37 +403,98 @@ begin
 Because we need a reliable counter to make sure it goes exactly as we wish, \textit{iverilog} is used for testing, below is its output:
 
 This is snapshot of the testing from the basic counter:
-\begin{verbatim}ticket:23370    ,enable:1       ,reset:0        ,x:155  ,finished :0ticket:23380    ,enable:1       ,reset:0        ,x:156  ,finished :0ticket:23390    ,enable:1       ,reset:0        ,x:157  ,finished :0ticket:23400    ,enable:1       ,reset:0        ,x:158  ,finished :0ticket:23410    ,enable:1       ,reset:0        ,x:159  ,finished :1ticket:23420    ,enable:1       ,reset:0        ,x:  0  ,finished :0
+\begin{verbatim}
+ticket:23370    ,enable:1       ,reset:0        ,x:155  ,finished :0
+ticket:23380    ,enable:1       ,reset:0        ,x:156  ,finished :0
+ticket:23390    ,enable:1       ,reset:0        ,x:157  ,finished :0
+ticket:23400    ,enable:1       ,reset:0        ,x:158  ,finished :0
+ticket:23410    ,enable:1       ,reset:0        ,x:159  ,finished :1
+ticket:23420    ,enable:1       ,reset:0        ,x:  0  ,finished :0
 \end{verbatim}
 Below is the snapshot of the testing from the jumping counter:
 \begin{verbatim}
-ticket:23950    ,enable:1       ,reset:0        ,x:147  ,finished :0ticket:23960    ,enable:1       ,reset:0        ,x:150  ,finished :0ticket:23970    ,enable:1       ,reset:0        ,x:153  ,finished :0ticket:23980    ,enable:1       ,reset:0        ,x:156  ,finished :0ticket:23990    ,enable:1       ,reset:0        ,x:159  ,finished :1ticket:24000    ,enable:1       ,reset:0        ,x:  0  ,finished :0ticket:24010    ,enable:1       ,reset:0        ,x:  3  ,finished :0ticket:24020    ,enable:1       ,reset:0        ,x:  6  ,finished :0
+ticket:23950    ,enable:1       ,reset:0        ,x:147  ,finished :0
+ticket:23960    ,enable:1       ,reset:0        ,x:150  ,finished :0
+ticket:23970    ,enable:1       ,reset:0        ,x:153  ,finished :0
+ticket:23980    ,enable:1       ,reset:0        ,x:156  ,finished :0
+ticket:23990    ,enable:1       ,reset:0        ,x:159  ,finished :1
+ticket:24000    ,enable:1       ,reset:0        ,x:  0  ,finished :0
+ticket:24010    ,enable:1       ,reset:0        ,x:  3  ,finished :0
+ticket:24020    ,enable:1       ,reset:0        ,x:  6  ,finished :0
 \end{verbatim}
 
 
 Below is the snapshot of the testing from the xy counter:
 \begin{verbatim}
-ticket:575970   ,enable:1       ,reset:0        ,x:155  ,y:119  ,finished :0ticket:575980   ,enable:1       ,reset:0        ,x:156  ,y:119  ,finished :0ticket:575990   ,enable:1       ,reset:0        ,x:157  ,y:119  ,finished :0ticket:576000   ,enable:1       ,reset:0        ,x:158  ,y:119  ,finished :0ticket:576010   ,enable:1       ,reset:0        ,x:159  ,y:119  ,finished :1ticket:576020   ,enable:1       ,reset:0        ,x:  0  ,y:  0  ,finished :0ticket:576030   ,enable:1       ,reset:0        ,x:  1  ,y:  0  ,finished :0ticket:576040   ,enable:1       ,reset:0        ,x:  2  ,y:  0  ,finished :0ticket:576050   ,enable:1       ,reset:0        ,x:  3  ,y:  0  ,finished :0
+ticket:575970   ,enable:1       ,reset:0        ,x:155  ,y:119  ,finished :0
+ticket:575980   ,enable:1       ,reset:0        ,x:156  ,y:119  ,finished :0
+ticket:575990   ,enable:1       ,reset:0        ,x:157  ,y:119  ,finished :0
+ticket:576000   ,enable:1       ,reset:0        ,x:158  ,y:119  ,finished :0
+ticket:576010   ,enable:1       ,reset:0        ,x:159  ,y:119  ,finished :1
+ticket:576020   ,enable:1       ,reset:0        ,x:  0  ,y:  0  ,finished :0
+ticket:576030   ,enable:1       ,reset:0        ,x:  1  ,y:  0  ,finished :0
+ticket:576040   ,enable:1       ,reset:0        ,x:  2  ,y:  0  ,finished :0
+ticket:576050   ,enable:1       ,reset:0        ,x:  3  ,y:  0  ,finished :0
 \end{verbatim}
 
 Below is the example of the test bench:
 \begin{lstlisting}[language=Verilog]
-module ramfill_tb;// module ramfill(clk_adc,enable,reset,finfished,adc_data,vga_data,CounterX);reg clk;wire [7:0] CounterX;reg enable,reset;wire finished;vga_sin u0(	.clk(clk), 	.reset	(reset),	.enable (enable),	.finished (finished), 	.CounterX	(CounterX));always     #5 clk = ~clk;     initial begin	reset = 0;	enable = 0;	clk = 1;	#10 reset = 1;//after 10 tickets	#10 reset = 0;//then after 10 tickets,reset is set 1 after reset == 1 is kept for 10 tickets	#10 enable = 1;	#20000 reset = 1;//try again	#200 reset = 0;	#2000 enable = 1;	#2000 enable = 0;	#200 reset = 0;	#25 $finish; endinitial  begin    $monitor("ticket:%g\t,enable:%b\t,reset:%b\t,x:%d\t,finished :%b",$time,enable,reset,CounterX,finished); end endmodule
+module ramfill_tb;
+
+// module ramfill(clk_adc,enable,reset,finfished,adc_data,vga_data,CounterX);
+reg clk;
+wire [7:0] CounterX;
+reg enable,reset;
+wire finished;
+
+vga_sin u0(
+	.clk(clk), 
+	.reset	(reset),
+	.enable (enable),
+	.finished (finished), 
+	.CounterX	(CounterX));
+
+always  
+   #5 clk = ~clk; 
+    
+initial begin
+	reset = 0;
+	enable = 0;
+	clk = 1;
+
+	#10 reset = 1;//after 10 tickets
+	#10 reset = 0;//then after 10 tickets,reset is set 1 after reset == 1 is kept for 10 tickets
+	#10 enable = 1;
+	#20000 reset = 1;//try again
+	#200 reset = 0;
+	#2000 enable = 1;
+	#2000 enable = 0;
+	#200 reset = 0;
+	#25 $finish; 
+end
+
+
+initial  begin
+    $monitor("ticket:%g\t,enable:%b\t,reset:%b\t,x:%d\t,finished :%b",$time,enable,reset,CounterX,finished); 
+end 
+
+endmodule
 \end{lstlisting}
 
 \subsection{The RAM}
-It would be good if we can write some test bench with Ram, but because it is a Mega function and I cannot find a way to compile it.
+It would be good if we can write some test bench with RAM, but because it is a Mega function and I cannot find a way to compile it.
 
 
-The Ram is used throughout the project as well, below is a list of its usage:
+The RAM is used throughout the project as well, below is a list of its usage:
 \begin{itemize}
-    \item In clean process: A Ram is used to provide the image of the grid which is going to be drawn.
-    \item In sampling process: A Ram is used to store the sampling information
-    \item In drawing process: The same Ram is used to retrieve information from the Ram.
-    \item In DA process: 4 Rams are used to store the pro recored wave information. 
+    \item In clean process: A RAM is used to provide the image of the grid which is going to be drawn.
+    \item In sampling process: A RAM is used to store the sampling information
+    \item In drawing process: The same RAM is used to retrieve information from the RAM.
+    \item In DA process: 4 RAMs are used to store the pro recored wave information. 
     \end{itemize}
 \subsubsection{One Port reading only RAM}
-This is the basic usage of the Ram, and the purpose of this is simply to get the initialing memory information from the Ram, below is an example:
+\label{sec:siram}
+This is the basic usage of the RAM, and the purpose of this is simply to get the initialing memory information from the RAM, below is an example:
 \begin{lstlisting}[language=Verilog]
 wire rambuffer;
 ram_background ram_entity(
@@ -439,7 +507,7 @@ endmodule
 And we just get the information from the address which is defined by our counter.
 
 \subsubsection{Dual Port RAM}
-
+\label{sec:duram}
 That is hardest part of the entire project, and the natural way of doing so is by using a FIFO mega function \cite{fifo}. But because \textit{quartus} only provide fixed length FIFO and due to various other reasons, I cannot figure out a right way of stopping the FIFO from overflow, an image is provided to demonstrate the problem:
 
 
@@ -448,7 +516,7 @@ That is hardest part of the entire project, and the natural way of doing so is b
 
 {
 \includegraphics[scale = 0.1]{IMG_1389.JPG}
-\captionof{figure}{There is a periodic unsolvable overflow problem at each image.}
+\captionof{figure}{There is a periodic unsolvable overflow problem at each image when using FIFO.}
 }
 \end{minipage}
 \medskip
@@ -462,12 +530,26 @@ And a dual port asynchronous memory is a core component of the entire design, it
 
 And the solution is the example below:
 \begin{lstlisting}[language=Verilog]
-// sync clocksreg prolong_finished = 0;always @(posedge w_finished) // flip flopbegin	prolong_finished = prolong_finished + 1;endreg previous_signal;reg r_finished;always @(posedge clk) begin	previous_signal <= prolong_finished; 	r_finished <= previous_signal ^ prolong_finished;	// or with its previous value.end
+// sync clocks
+reg prolong_finished = 0;
+always @(posedge w_finished) // flip flop
+begin
+	prolong_finished = prolong_finished + 1;
+end
+
+reg previous_signal;
+reg r_finished;
+always @(posedge clk) 
+begin
+	previous_signal <= prolong_finished; 
+	r_finished <= previous_signal ^ prolong_finished;
+	// or with its previous value.
+end
 \end{lstlisting}
 
 The writing finished signal will change the status of a flip-flop register, and the reading clock will be constantly detecting the level of the register and when  it detects the difference it will output a reading finished signal.
 
-By doing so, I successfully made the writing finished clock readable from the reading cycle. Therefor, at the status machine it will be able to detect if the sampling is finished at a different clock.\\
+By doing so, I successfully made the writing finished clock readable from the reading cycle. Therefor, the status machine will be able to detect if the sampling is finished at a different clock.\\
 
 
 Below is a simulation result:
@@ -483,24 +565,25 @@ Below is a simulation result:
 \medskip
 
 \subsection{The Status Machine}
+\label{sec:status}
 The status machine runs at the pixel refresh rate, which is 25Mhz, and it is the main block of the whole project. \\
 
 
-The implementation of status machine goes as the following, Whenever a status's mission is finished it will define a next state. And there is a cycle to change the status according. 
+The implementation of status machine goes as the following, Whenever a status's mission is finished it will define a next state. And there is a cycle to change the status accordingly. 
 
-For all the status, it always goes from enabling its module and reseting all the rest modules. \\
+For all the statuses, it always goes from enabling its module and reseting all the others modules. \\
 
 
 It is separated in 4 stages:
 \begin{itemize}
     \item clean:
-    Call the clean module to clean the screen, and wait until it is finished.
+    Call the clean module to clean the screen, and it goes to \textit{fill} module when it is finished.
     \item fill:
-    Call the Sampling module to write memory to the Ram, and wait until it is finished. Notice that the status machine detects the status of the filling module at 25Mhz but the filling module itself runs at sampling frequency.
+    Call the Sampling module to write memory to the RAM, and it goes to \textit{draw} module when it is finished. Notice that the status machine detects the status of the filling module at 25Mhz but the filling module itself runs at sampling frequency.
     \item draw:
-    Call the drawing module to draw the memory from the Ram, and wait until it is finished.
+    Call the drawing module to draw the memory according to the RAM, and it goes to \textit{delay} module when it is finished.
     \item delay:
-    Call the delay module to delay the whole process, and wait until it is finished.
+    Call the delay module to delay the whole process, and it goes to \textit{clean} module when it is finished.
 \end{itemize}
 
 
@@ -613,7 +696,7 @@ always @ * // combinational circuit
 \end{lstlisting}
  
 \subsection{The Trigger}
-
+\label{sec:trigger}
 The trigger detects the input signal and emit an enabling signal to start the sampling, two mechanism is implemented and tested.
 
 
@@ -691,7 +774,7 @@ The second one receive signal from 27Mhz and generate 3 signals, all of them are
 
 \subsection{University Provided modules}
 \subsubsection{The VGA Adaptor Module}
-
+\label{sec:vga}
 VGA module is used to connect the board with the monitor, below is the schematic snapshot:
 
 \begin{minipage}[t]{\linewidth}
@@ -707,6 +790,7 @@ VGA module is used to connect the board with the monitor, below is the schematic
 Although it is a different module, but I use it according to this table \cite{vgaadaptor}.
 
 \subsubsection{The AD-DA Adaptor Module}
+\label{sec:adda}
 AD-DA adaptor module provide a interface for me to control the AD-DA converter. Below is the snapshot of its schematic design:
 
 \begin{minipage}[t]{\linewidth}
@@ -721,12 +805,12 @@ AD-DA adaptor module provide a interface for me to control the AD-DA converter. 
 
 \subsection{Matlab code}
 
-Beside from the \textit{verilog HDL}, there is roughly $1.5\%$ Matlab code.   
+Aside from the \textit{verilog HDL} code, there is roughly $1.5\%$ Matlab code.   
 \subsubsection{Matlab code for RAM initialization file} 
+\label{sec:correct}
+Because RAM need to read its initialing file, two Matlab files are written, one is to generate the background and another one is to generate wave for DA converter.\\
 
-Because RAM will need to read its initialing file, two Matlab files are written, one is to generate the background and another one is to generate wave for DA converter.\\
-
-The one for generating the background, it is able to convert an image into Ram initializing file:
+The one for generating the background, it is able to convert an image into RAM initializing file:
 \begin{lstlisting}[language=Matlab]
 function imgscaled = miffilegen(infile, outfname, numrows, numcols)
 %miffilegen('photo.jpg','test.mif',120,160) generate black and white image.
@@ -780,7 +864,7 @@ The code is modified to be able to generate an image directly from Matlab's arra
 \medskip
 \end{center}
 
-This one is to write the wave to initialize the Ram:
+This one is to write the wave to initialize the RAM:
 \begin{lstlisting}[language=Matlab]
 function signal_generator(outfname)
 % Depth is 2014, word length is  2^14.
@@ -818,22 +902,127 @@ fprintf(fid,'END;');
 fclose(fid);
 \end{lstlisting}
 
+And to generator .mif file we can simple change the code in function \textit{gen\_y(t)}, below is a example of which:
+
+\begin{lstlisting}[language=Matlab]
+function y = gen_y(x)
+
+    y = square(x);
+\end{lstlisting}
+
 And the mean time it can calculate the base frequency of the generated wave:
 \begin{verbatim}
 for length of 1024the frequency is 97656.25
 \end{verbatim}
 
 
-
 \subsubsection{Matlab code for doing measurement}
 
 Those two codes enable us to tell the frequency and amplitude based on the output image on the screen and the switch:
-\begin{lstlisting}[language=Verilog]
+\paragraph{Measuring Frequency}
 
+
+Below is the code for doing so:
+
+\begin{lstlisting}[language=Matlab]
+function fw = cal_fre(sampling_rate,jumping,number_wave)
+
+switch sampling_rate
+    case '10'
+        fs = 13.5*10^6;
+    case '01'
+        fs = 54*10^6;
+    case {'11','00'}
+        fs = 27*10^6;
+end
+
+switch jumping
+    case '00'
+        kj = 1;
+    case '01'
+        kj = 2;
+    case '10'
+        kj = 3;
+    case '11'
+        kj = 4;
+end
+
+fw = number_wave * fs /(kj*160);
 \end{lstlisting}
 
-\subsubsection{Matlab code for setting up refresh rate}
+It is simply an implementation of the formula below:
+$$ f_w = \frac{n*fs}{k_j*160}$$
+Below is a example of usage,
+\begin{center}
+\begin{minipage}[t]{\linewidth}
+%\label{fig:main}
 
+{
+\includegraphics[scale = 0.05]{IMG_1388.JPG}
+\captionof{figure}{Frequency measurement, reading from switch 14-13 is 01 and reading from switch 12 to 11 is 11. There is around 4.5 waves on the screen.}
+}
+\end{minipage}
+\medskip
+\end{center}
+
+To measure the frequency, we need to know the shape of the wave, if we look at the image above, we can see that there is roughly 4.6 peak in the whole image, and by putting that number in along with the reading from the switch 14,13 and switch 12,11, we will get the following result,
+
+\begin{verbatim}
+>> cal_fre('10','11',4.6)
+
+ans =
+
+   9.7031e+04
+\end{verbatim}
+
+Because it is the output from the generator at its base frequency, we can get from section \ref{sec:correct} that it is correct.( The correct frequency is at around 97656.25)
+
+A table from this program is also implemented which can be seen from section\ref{sec:fre}
+
+\paragraph{Measuring Amplitude}
+Below is the code for doing so:
+
+\begin{lstlisting}[language=Matlab]
+function amp = cal_amp(shift,num)
+
+switch shift
+    case '0000'
+        fb = 7;
+    case '0001'
+        fb = 8;
+    case '0010'
+        fb = 9;
+    case '0011'
+        fb = 10;
+    case '0100'
+        fb = 6;
+    case '1000'
+        fb = 5;
+    case '1100'
+        fb = 4;
+end
+
+bitleft = 14 - fb;
+amp = num*20*2/(2^bitleft);
+\end{lstlisting}
+It is simply an implementation of the formula below:
+
+$$amp = \frac{20*2*n}{2^{bl}}$$
+\begin{center}     
+\begin{minipage}[t]{\linewidth}
+%\label{fig:main}
+
+{
+\includegraphics[scale = 0.1]{apr.jpg}
+\captionof{figure}{This is the overall view of the controlling method.}
+}
+\end{minipage}
+\medskip
+\end{center}
+which can be seen from section\ref{sec:amp}
+
+\subsubsection{Matlab code for setting up refresh rate}
+\label{sec:refresh}
 This code enable us to calculate how much delay is needed to change the refresh rate down to 50hz:
 \begin{lstlisting}[language=Verilog]
 x = 160;
@@ -858,9 +1047,11 @@ to draw a whole screen:0.000768
 to draw a whole line:6.4e-06
 to delay at 48hz. 25Mhz needed(positive edge): 520833.3333. bit needed 19
 \end{verbatim}
+
 \subsubsection{Matlab code for calculating biased shift}
 
-Because the center of the AD data is at $01_111_111_111_111$ and our screen's center is at 60. We need to balance the bias by introducing some artificial bias, 
+\label{sec:biased}
+Because the center of the AD data is at $01\_111\_111\_111\_111$ and our screen's center is at 60. We need to balance the bias by introducing some artificial biases, 
 \begin{lstlisting}[language=Matlab]
 tk = [1];
 original = repmat(tk,1,13);
@@ -892,33 +1083,250 @@ shift by 10, to bias it negative -52
 shift by 11, to bias it negative -56
 \end{verbatim}
 
-
-
-
-
 \section{Module Specification}
-\subsection{VGA Module}
-\subsection{AD Module}
-\subsection{DA Module}
-\subsection{Plotting Module}
-\subsubsection{Drawing Background Module}
-\subsubsection{Drawing Wave Module}
-\subsubsection{Storing AD Data Module}
-\subsubsection{Pause Module}
-\subsection{Implementation of the control sequence}
 
+Below is the list of modules I implemented, besides from this are some Mega function modules.
+\subsection{VGA Module}
+VGA module is simply the implementation of the module in section \ref{sec:vga}.
+\subsection{AD-DA Module}
+\paragraph{AD module}
+AD module is simply the module from section \ref{sec:adda}. 
+\paragraph{DA module}
+
+DA module is combined in two parts, first it is the module from section \ref{sec:adda}. And then a simple counter is implemented to keep record of the value of the push button. The system will change its output wave according to this value.
+
+\subsection{Status Machine Module}
+\label{sec:statusm}
+Status machine is combined in 4 parts, which can be seen from section \ref{sec:back}, section \ref{sec:wave}, section \ref{sec:fill}, section \ref{sec:pause}. And the implementation of controlling part is in section \ref{sec:status}. Besides from which, it also has a built in dual port RAM for section \ref{sec:wave} to read and section \ref{sec:fill} to write.
+\subsection{Drawing Background Module}
+This is an implementation of section \ref{sec:coucount}. And it also has a built in RAM which stores the background image.
+\label{sec:back}
+
+\subsection{Drawing Wave Module}
+This is an implementation of section \ref{sec:bascount} for providing X coordinate and \ref{sec:jumcount} for providing RAM reading address. By adding the input value it also supports shift.
+\label{sec:wave}
+
+\subsection{Storing AD Data Module}
+This is an implementation of section \ref{sec:bascount} for providing RAM writing address and an implementation of section \ref{sec:trigger} for supporting triggering and an implementation of section \ref{sec:duram} for section \ref{sec:statusm} to detects its behaviour in reading cycle.
+\label{sec:fill}
+
+\subsection{Pause Module}
+This is an implementation of the section \ref{sec:bascount} to simply cause a delay to scale down the refresh rate. The counter's value is calculated by section \ref{sec:refresh}.
+\label{sec:pause}
+
+\subsection{Sampling rate switch module}
+
+This module is simply to change its output frequency according to the switches value. The input frequencies are generated by PLL. 
+
+\subsection{Resize module}
+
+This module is simply to resize the input by doing bits shift, and the value of which can be found in section \ref{sec:biased}
 
 \section{Conclusion and potential works}
 
 
+Below is a list of potential works:
+\begin{itemize}
+\item According to \textit{quartus}, my design has used 67\% of the memory and 31\% of pins, total login elements consummation is at around 2\%. Colorful background is not possible due to the restriction of the RAM. But we may can implement a higher resolution.\\
+
+
+\item By implementation more trigger, we will be able to detect the value of the wave by the board itself and we can further exploit the LCD to show the value.\\
+
+\item Only one route of the AD is implemented, if time allowing, it is possible to change into two route.\\
+
+\item By pins out the trigger to pin EXT\_CLOCK, we can use external to trigger out plotting.
+\end{itemize}
+
+ 
 \section{Appendix}
-\subsection{Problems in the development and the Solution}
-\subsubsection{The for loop}
-\subsubsection{The FIFO}
-\subsubsection{Debugging method}
+
 \subsection{Frequency Table}
+\label{sec:fre}
+The first column is for switch 14-13 and the second one is for switch 12-11.\\
+
+\begin{minipage}{.5\linewidth}
+\begin{tabular}{p{0.3cm}|p{0.3cm}| p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}}
+
+&& 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 &10 \\ \hline
+
+
+10&00&84375&168750&253125&337500&421875&506250&590625&675000&759375&843750\\ \hline
+
+
+
+
+10&01&42187.5&84375&126562.5&168750&210937.5&253125&295312.5&337500&379687.5&421875\\ \hline
+
+
+
+
+10&10&28125&56250&84375&112500&140625&168750&196875&225000&253125&281250\\ \hline
+
+
+
+
+10&11&21093.75&42187.5&63281.25&84375&105468.75&126562.5&147656.25&168750&189843.75&210937.5\\ \hline
+
+
+
+
+01&00&337500&675000&1012500&1350000&1687500&2025000&2362500&2700000&3037500&3375000\\ \hline
+
+
+
+
+01&01&168750&337500&506250&675000&843750&1012500&1181250&1350000&1518750&1687500\\ \hline
+
+
+
+
+01&10&112500&225000&337500&450000&562500&675000&787500&900000&1012500&1125000\\ \hline
+
+
+
+
+01&11&84375&168750&253125&337500&421875&506250&590625&675000&759375&843750\\ \hline
+
+
+
+
+11&00&168750&337500&506250&675000&843750&1012500&1181250&1350000&1518750&1687500\\ \hline
+
+
+
+
+11&01&84375&168750&253125&337500&421875&506250&590625&675000&759375&843750\\ \hline
+
+
+
+
+11&10&56250&112500&168750&225000&281250&337500&393750&450000&506250&562500\\ \hline
+
+
+11&11&42187.5&84375&126562.5&168750&210937.5&253125&295312.5&337500&379687.5&421875\\ 
+\end{tabular}
+\end{minipage}
+
 \subsection{Amplitude Table}
+\label{sec:amp}
+\begin{center}
+\begin{tabular}{cccc}
+switch4-1& one grid & two grid & three grid\\
+0000&0.3125&0.625&0.9375\\ \hline
+
+
+
+
+0001&0.625&5&1.875\\ \hline
+
+
+
+
+0010&5&2.5&3.75\\ \hline
+
+
+
+
+0011&2.5&5&7.5\\ \hline
+
+
+
+
+0100&0.15625&0.3125&0.46875\\ \hline
+
+
+
+
+1000&0.078125&0.15625&0.23438\\ \hline
+
+
+
+
+1100&0.039062&0.078125&0.11719\\ \hline
+\end{tabular}
+\end{center}
+
+
 \subsection{Development History}
+\begin{longtable}{@{\extracolsep{\fill}}lll@{}}
+Writer & data & commit \\
+Yingjie & 2015-04-01 & Initial commit \\ \hline
+Yingjie & 2015-04-01 & git ignore \\ \hline
+Yingjie & 2015-04-01 & .gitignore is now working \\ \hline
+Yingjie & 2015-04-01 & Error gitignore fixed \\ \hline
+Yingjie & 2015-04-02 & 1 bit ram success \\ \hline
+Yingjie & 2015-04-02 & now it is a moving images, but it is correct, may have to do with the address\_max \\ \hline
+Yingjie & 2015-04-07 & Edge from negative to positive \\ \hline
+Yingjie & 2015-04-07 & Adding matlab source code for black and white image \\ \hline
+Yingjie & 2015-04-07 & Now it is static image \\ \hline
+Yingjie & 2015-04-07 & From manual address to mulitiplication \\ \hline
+Yingjie & 2015-04-07 & Clear module removed, working on sine module \\ \hline
+Yingjie & 2015-04-07 & Now this module can draw a sine wave \\ \hline
+Yingjie & 2015-04-07 & add the matlab .mif generator \\ \hline
+Yingjie & 2015-04-21 & Delete vga to lcd \\ \hline
+Yingjie & 2015-04-21 & ADC AND VGA \\ \hline
+Yingjie & 2015-04-21 & working on state machine \\ \hline
+Yingjie & 2015-04-21 & Starting on state machine from vga+adc and two ms \\ \hline
+Yingjie & 2015-04-21 & Removed previous display module, testing sinewave with lock \\ \hline
+Yingjie & 2015-04-21 & lock success \\ \hline
+Yingjie & 2015-04-21 & Suggestted LCD\_VGA.bdf file, only ad, leave the display vacant \\ \hline
+Yingjie & 2015-04-21 & testing state machine \\ \hline
+Yingjie & 2015-04-21 & testing on transfer inputs \\ \hline
+Yingjie & 2015-04-21 & A initial value bug \\ \hline
+Yingjie & 2015-04-21 & bug, only last item works \\ \hline
+Yingjie & 2015-04-21 & Now a configurable sine wave, sw1: a bug to be solved \\ \hline
+Yingjie & 2015-04-21 & Bug fixed, sw16 to draw sine or not \\ \hline
+Yingjie & 2015-04-21 & Remove bug in sine display, moving on state machine \\ \hline
+Yingjie & 2015-04-21 & Now at the same time \\ \hline
+Yingjie & 2015-04-21 & New image overlapping \\ \hline
+Yingjie & 2015-04-21 & A static image overlapping \\ \hline
+Yingjie & 2015-04-21 & static image,perfect sequence \\ \hline
+Yingjie & 2015-04-21 & Now a static overlapping image with a good background \\ \hline
+Yingjie & 2015-04-22 & State machine merged \\ \hline
+Yingjie & 2015-04-22 & Now connected to vga, working on trigger \\ \hline
+Yingjie & 2015-04-22 & blank initial screen \\ \hline
+Yingjie & 2015-04-23 & temp\_commit \\ \hline
+Yingjie & 2015-04-24 & reverted to state machine \\ \hline
+Yingjie & 2015-04-24 & background,sin\_draw now is state\_machine, wokring on introduce adc using fifo \\ \hline
+Yingjie & 2015-04-24 & Introduce test bench using iverilog \\ \hline
+Yingjie & 2015-04-24 & state machine for delay,sin\_show,clean,woking on fifo \\ \hline
+Yingjie & 2015-04-24 & Add mif file back \\ \hline
+Yingjie & 2015-04-24 & Now switch with led on, changed LCM\_VGA.bdf file \\ \hline
+Yingjie & 2015-04-24 & first fifo mapper \\ \hline
+Yingjie & 2015-04-24 & Added a always writing adc to the module under draw\_sin, going to implement trigger \\ \hline
+Yingjie & 2015-04-24 & Now I can see from the vga, woking on trigger and data\_mapper \\ \hline
+Yingjie & 2015-04-24 & Now the waveform is in the center \\ \hline
+Yingjie & 2015-04-25 & Temp commit at 25 April \\ \hline
+Yingjie Luan & 2015-04-26 & working on manual ram, fifo is too complicated \\ \hline
+Yingjie Luan & 2015-04-26 & finished writing manually ram \\ \hline
+Yingjie Luan & 2015-04-26 & Successeed \\ \hline
+Yingjie Luan & 2015-04-26 & `reset' bug fixed by change the default status to do\_nothing \\ \hline
+Yingjie Luan & 2015-04-26 & synthesis adc clock \\ \hline
+Yingjie Luan & 2015-04-26 & working on synchonzing finished signal \\ \hline
+Yingjie Luan & 2015-04-26 & Sync Proved success \\ \hline
+Yingjie Luan & 2015-04-26 & change background \\ \hline
+Yingjie Luan & 2015-04-26 & Rename trigger module into sample time \\ \hline
+Yingjie Luan & 2015-04-26 & trigger enabled, but image not still \\ \hline
+Yingjie Luan & 2015-04-26 & changed a trigger design, still not working \\ \hline
+Yingjie Luan & 2015-04-26 & The clock changer is wrong,now a static image \\ \hline
+Yingjie Luan & 2015-04-26 & trigger with new design \\ \hline
+Yingjie Luan & 2015-04-26 & Pin out state and clock, not functioning \\ \hline
+Yingjie Luan & 2015-04-26 & Functioning with new trigger \\ \hline
+Yingjie Luan & 2015-04-26 & Merge branch `new\_compressor' \\ \hline
+Yingjie Luan & 2015-04-26 & Added a converter module \\ \hline
+Yingjie Luan & 2015-04-26 & Changed default state \\ \hline
+Yingjie Luan & 2015-04-27 & Update Matlab Function \\ \hline
+Yingjie Luan & 2015-04-29 & 3 sample clock \\ \hline
+Yingjie Luan & 2015-04-29 & Implemented sample clock \\ \hline
+Yingjie Luan & 2015-04-29 & Merged signal generator \\ \hline
+Yingjie Luan & 2015-04-29 & Sample more data \\ \hline
+Yingjie Luan & 2015-04-29 & Working on time division \\ \hline
+Yingjie Luan & 2015-04-29 & time division \\ \hline
+Yingjie Luan & 2015-04-29 & MOVE up and down \\ \hline
+Yingjie Luan & 2015-04-29 & rescale \\ \hline
+Yingjie Luan & 2015-04-29 & Multiple waves signal generator \\ \hline
+Yingjie Luan & 2015-04-29 & Update wave \\ \hline
+Yingjie Luan & 2015-04-29 & Signal\_selector\_without\_test \\ \hline\end{longtable}
 
 
 

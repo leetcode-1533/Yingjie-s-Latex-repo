@@ -61,7 +61,7 @@ The main objective of this project is to build a digital Oscilloscope based on F
 \subsection{Main Aspect}
 After one month of works, I have successfully implemented the primary goal, which is to mapping the AD data onto VGA. Not only so, an edge triggering mechanism is implemented for providing a static image, a arbitrary function generator is also implemented as a byproduct of this project. Oscilloscope itself is fully configurable, we can use the switches to control the sample frequency, wave time division, wave center location and wave amplitude. \\
 
-Below is the project result at the functioning result:
+Below is the project result:
 
 \begin{center}
 \begin{minipage}[t]{\linewidth}
@@ -113,7 +113,7 @@ Below is the supported control method:
 %\label{fig:main}
 
 {
-\includegraphics[scale = 0.1]{IMG_1387.JPG}
+\includegraphics[scale = 0.1]{apr.jpg}
 \captionof{figure}{This is the overall view of the controlling method.}
 }
 \end{minipage}
@@ -216,9 +216,25 @@ Below is the supported monitor method to get the data from the board.
          Meaning that the system is drawing the wave from the Ram according to the sampled signal.
          \item LED 7 is off, 6 is off, Status 00:
          Meaning that the system is clean the screen by redrawing a regular grid background.
+         
     \end{itemize}  
-    
-    In reality, as we can see from the image above, because the system is delayed for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(Status 10).
+      In reality, as we can see from the image above, because the system is delayed for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(Status 10).
+      \item Switch indicator
+      
+      The switch indicator is used to indicator which switch is on or off, as we can see from the image below:
+      
+    \begin{center}     
+\begin{minipage}[t]{\linewidth}
+%\label{fig:main}
+
+{
+\includegraphics[scale = 0.1]{IMG_1387.JPG}
+\captionof{figure}{This is switch indicator.}
+}
+\end{minipage}
+\medskip
+\end{center}
+  
     
       
 \end{itemize}
@@ -431,7 +447,7 @@ That is hardest part of the entire project, and the natural way of doing so is b
 %\label{fig:main}
 
 {
-\includegraphics[scale = 0.3]{apr.jpg}
+\includegraphics[scale = 0.1]{IMG_1389.JPG}
 \captionof{figure}{There is a periodic unsolvable overflow problem at each image.}
 }
 \end{minipage}
@@ -758,11 +774,56 @@ The code is modified to be able to generate an image directly from Matlab's arra
 
 {
 \includegraphics[scale = 1]{temp.png}
-\captionof{figure}{This is the background plot.}
+\captionof{figure}{This is the background image.}
 }
 \end{minipage}
 \medskip
 \end{center}
+
+This one is to write the wave to initialize the Ram:
+\begin{lstlisting}[language=Matlab]
+function signal_generator(outfname)
+% Depth is 2014, word length is  2^14.
+% The DAC frequency is 100Mhz.
+dac_freq = 100*10^6;
+display(['for length of ',num2str(1024),'the frequency is ',num2str(dac_freq/1024)])
+t = linspace(0,2*pi,1024);
+y = gen_y(t)  - 0.01;
+
+y = y./max(abs(y)); % in the range of -1 to 1
+
+
+shift = 2^13-1;
+y = int32(y*shift);
+y = y + shift;
+
+%0->8191*2
+
+rows = length(y);
+
+fid = fopen(outfname,'w');
+
+fprintf(fid,'-- %3ux%d 1bit sine values\n\n',rows,ceil(log2(double(max(y)))));
+fprintf(fid,'WIDTH = %d;\n',ceil(log2(double(max(y)))));
+fprintf(fid,'DEPTH = %4u;\n\n',rows);
+fprintf(fid,'ADDRESS_RADIX = UNS;\n');
+fprintf(fid,'DATA_RADIX = UNS;\n\n');
+fprintf(fid,'CONTENT BEGIN\n');
+count = 0;
+for r = 1:rows
+    fprintf(fid,'%4u : %4u;\n',count, y(r));
+    count = count + 1;
+end
+fprintf(fid,'END;');
+fclose(fid);
+\end{lstlisting}
+
+And the mean time it can calculate the base frequency of the generated wave:
+\begin{verbatim}
+for length of 1024the frequency is 97656.25
+\end{verbatim}
+
+
 
 \subsubsection{Matlab code for doing measurement}
 
@@ -797,6 +858,41 @@ to draw a whole screen:0.000768
 to draw a whole line:6.4e-06
 to delay at 48hz. 25Mhz needed(positive edge): 520833.3333. bit needed 19
 \end{verbatim}
+\subsubsection{Matlab code for calculating biased shift}
+
+Because the center of the AD data is at $01_111_111_111_111$ and our screen's center is at 60. We need to balance the bias by introducing some artificial bias, 
+\begin{lstlisting}[language=Matlab]
+tk = [1];
+original = repmat(tk,1,13);
+display('the original center')
+bi2de(original)
+
+for i = 3:11
+    now_center = bi2de(original(1:end-i));
+    if now_center-60 > 0
+        bit_needed=ceil(log2(now_center)+1);
+        sign = 'plus';
+    else
+        bit_needed=ceil(log2(60- now_center));
+        sign = 'negative';
+    end
+    display(['shift by ',num2str(i),', to bias it ',sign,' ',num2str(now_center-59)])
+end
+\end{lstlisting}
+And it is the output:
+\begin{verbatim}
+shift by 3, to bias it plus 964
+shift by 4, to bias it plus 452
+shift by 5, to bias it plus 196
+shift by 6, to bias it plus 68
+shift by 7, to bias it plus 4
+shift by 8, to bias it negative -28
+shift by 9, to bias it negative -44
+shift by 10, to bias it negative -52
+shift by 11, to bias it negative -56
+\end{verbatim}
+
+
 
 
 

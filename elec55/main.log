@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  1 MAY 2015 15:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  1 MAY 2015 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1155,7 +1155,60 @@ File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png used on input line 1355.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [28] (./main.bbl
+ [28]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1394.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [29]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1457.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [30]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1524.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[31]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1591.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [32]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1659.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [33]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1728.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [34]
+File: logo.png Graphic file (type png)
+
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1793.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [35]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1856.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [36]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1919.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [37]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1985.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[38] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 17--20
 []\OT1/cmr/m/n/10.95 University of Toronto.  http://www.eecg.utoronto.ca/ ja-ya
 r/ece241[]07f/vga/vga-
@@ -1165,18 +1218,18 @@ r/ece241[]07f/vga/vga-
 AED: lastpage setting LastPage
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1362.
+Package pdftex.def Info: logo.png used on input line 1997.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [29] (./main.aux)
+ [39] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6935 strings out of 493117
- 101909 string characters out of 6135433
- 397885 words of memory out of 5000000
- 10276 multiletter control sequences out of 15000+600000
+ 6994 strings out of 493117
+ 102628 string characters out of 6135433
+ 460885 words of memory out of 5000000
+ 10335 multiletter control sequences out of 15000+600000
  12090 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,17n,51p,645b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1196,10 +1249,10 @@ xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (29 pages, 18824372 bytes).
+Output written on main.pdf (39 pages, 18877094 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 222 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

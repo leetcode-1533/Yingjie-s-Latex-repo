@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.2}The RAM}{12}
 \contentsline {subsubsection}{\numberline {3.2.1}One Port reading only RAM}{12}
 \contentsline {subsubsection}{\numberline {3.2.2}Dual Port RAM}{12}
-\contentsline {subsection}{\numberline {3.3}The state Machine}{14}
+\contentsline {subsection}{\numberline {3.3}The State Machine}{14}
 \contentsline {subsection}{\numberline {3.4}The Trigger}{16}
 \contentsline {subsection}{\numberline {3.5}PLL}{17}
 \contentsline {subsection}{\numberline {3.6}University Provided modules}{17}
@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.2}AD-DA Module}{25}
 \contentsline {paragraph}{\nonumberline AD module}{25}
 \contentsline {paragraph}{\nonumberline DA module}{25}
-\contentsline {subsection}{\numberline {4.3}state Machine Module}{25}
+\contentsline {subsection}{\numberline {4.3}State Machine Module}{25}
 \contentsline {subsection}{\numberline {4.4}Drawing Background Module}{25}
 \contentsline {subsection}{\numberline {4.5}Drawing Wave Module}{26}
 \contentsline {subsection}{\numberline {4.6}Storing AD Data Module}{26}
@@ -47,3 +47,12 @@
 \contentsline {subsection}{\numberline {6.1}Frequency Table}{27}
 \contentsline {subsection}{\numberline {6.2}Amplitude Table}{27}
 \contentsline {subsection}{\numberline {6.3}Development History}{27}
+\contentsline {subsection}{\numberline {6.4}Full Source Code}{29}
+\contentsline {subsubsection}{\numberline {6.4.1}clear.v}{29}
+\contentsline {subsubsection}{\numberline {6.4.2}delay.v}{30}
+\contentsline {subsubsection}{\numberline {6.4.3}display\_state.v}{30}
+\contentsline {subsubsection}{\numberline {6.4.4}modisign.v}{33}
+\contentsline {subsubsection}{\numberline {6.4.5}ramfill.v}{34}
+\contentsline {subsubsection}{\numberline {6.4.6}vga\_sin.v}{36}
+\contentsline {subsubsection}{\numberline {6.4.7}sel\_clk.v}{37}
+\contentsline {subsubsection}{\numberline {6.4.8}signal\_gen.v}{37}

@@ -564,7 +564,7 @@ Below is a simulation result:
 \end{minipage}
 \medskip
 
-\subsection{The state Machine}
+\subsection{The State Machine}
 \label{sec:state}
 The state machine runs at the pixel refresh rate, which is 25Mhz, and it is the main block of the whole project. \\
 
@@ -1121,7 +1121,7 @@ AD module is simply the module from section \ref{sec:adda}.
 
 DA module is combined in two parts, first one is the module from section \ref{sec:adda}. And then a simple counter is implemented to keep recording of the value of the push button. The system will change its output wave according to this value.
 
-\subsection{state Machine Module}
+\subsection{State Machine Module}
 \label{sec:statusm}
 State machine is combined in 4 parts, which can be seen from section \ref{sec:back}, section \ref{sec:wave}, section \ref{sec:fill} and section \ref{sec:pause}. And the implementation of controlling part is in section \ref{sec:status}. Besides from which, it also has a built in dual port RAM for section \ref{sec:wave} to read and section \ref{sec:fill} to write.
 \subsection{Drawing Background Module}
@@ -1354,8 +1354,643 @@ Yingjie Luan & 2015-04-29 & Multiple waves signal generator \\ \hline
 Yingjie Luan & 2015-04-29 & Update wave \\ \hline
 Yingjie Luan & 2015-04-29 & Signal\_selector\_without\_test \\ \hline\end{longtable}
 
+\subsection{Full Source Code}
+\subsubsection{clear.v}
+\begin{lstlisting}[language=Verilog]
+module clear(CounterX,CounterY,clk,reset,enable,finished,color);
+
+input clk;
+input reset,enable;
+
+output reg [7:0] CounterX,CounterY;
+output finished;
+
+wire [14:0] address;
+
+wire CounterXmaxed = (CounterX==8'd159); // 159
+wire CounterYmaxed = (CounterY==8'd119); // 119
+assign finished = ((CounterXmaxed == 1) && (CounterYmaxed == 1));
+
+assign address = CounterX + CounterY * 160;
+
+always @(posedge clk)
+begin
+  if(reset == 1)
+    CounterX <= 0;
+  else
+  begin
+  if(CounterXmaxed)
+    CounterX <= 0;
+  else if(enable == 1)
+    CounterX <= CounterX + 1;
+  end
+end
+
+always @ (posedge clk)
+begin
+  if(reset == 1)
+    CounterY <= 0;
+  else
+  begin
+    if(CounterXmaxed == 1)
+    begin
+      if(CounterYmaxed)
+        CounterY <= 0;
+      else if(enable == 1)
+        CounterY <= CounterY + 1;
+    end
+  end
+end
+
+// output color;
+// endmodule
 
 
+output [11:0] color = {12{rambuffer}};
+wire rambuffer;
+ram_background ram_entity(
+  .address(address),
+  .clock(clk),
+  .wren(1'b0),
+  .q(rambuffer));
+
+endmodule
+\end{lstlisting}
+
+\subsubsection{delay.v}
+\begin{lstlisting}[language=Verilog]
+module delay(clk,enable,reset,finished);
+
+// module vga_sin(CounterX,CounterY,color,clk,enable,reset,finished);
+
+// to draw a whole screen:0.000768
+// to draw a whole line:6.4e-06
+// to delay at 48hz rate:0.02083325mhz needed(positive edge)520833.3333
+
+input clk,enable,reset;
+output finished;
+
+parameter cycle = 'd520833;
+
+reg [19:0] counter; // log2(520833.333) ~= 19
+wire countermaxed = (counter == cycle);
+assign finished = countermaxed;
+
+always @(posedge clk)
+begin
+  if(reset == 1)
+    counter <= 0;
+  else
+  begin
+  if(countermaxed)
+      counter <= 0;
+  else if(enable == 1)
+      counter <= counter + 1;
+  end
+end
+
+endmodule
+\end{lstlisting}
+
+\subsubsection{display\_state.v}
+\begin{lstlisting}[language=Verilog]
+// module display_state(CounterX,CounterY,color,clk,clk_en,rst_n);
+module display_state(CounterX,CounterY,color,clk,clk_en,rst_n,
+  adc_data,clk_adc,state,clk_down,vga_data,time_division,
+  move_up,move_down);
+
+input clk;
+input clk_en,rst_n;//clk_en is not implemented
+
+output reg [7:0] CounterX,CounterY;
+output reg [11:0] color;
+
+// module vga_sin(CounterX,CounterY,color,clk,enable,reset,finished);
+// module clear(CounterX,CounterY,clk,reset,enable,finished,color);
+wire [7:0] CounterX_clear,CounterY_clear,CounterX_sin;
+wire [11:0] color_clear, color_sin;
+reg enable_clear,enable_sin,reset_clear,reset_sin,enable_delay,reset_delay;
+wire finished_clear,finished_sin,finished_delay;
+
+input [2:0] move_up,move_down;
+
+sample_clock htime_entity(
+  .clk_in(clk_adc),
+  .clk_out(clk_down));
+// ram_flash ram_entity(
+//   .data(data_flash_reg), .wraddress(wraddress), .wren(Acquiring), .wrclock(clk_flash),
+//   .q(ram_output), .rdaddress(rdaddress), .rden(rden), .rdclock(clk)
+// );
+wire [7:0] ram_output;
+input [7:0] vga_data;//= (adc_data >> 7)-4;
+
+input [13:0] adc_data;
+input clk_adc;
+
+manual_ram ram_entity(
+  .data(vga_data), .wraddress(CounterX_fill),.wren(write_enable),.wrclock(clk_down), 
+  .q(ram_output), .rdaddress(read_CounterX_sin),.rden(enable_sin),.rdclock(clk));
+
+// module ramfill(clk_adc,enable,reset,finished,CounterX);
+
+reg enable_fill,reset_fill;
+wire finished_fill;
+wire [10:0] CounterX_fill;
+output wire clk_down;
+
+wire write_enable;
+ramfill fill_module(
+  .clk_adc(clk_down),
+  .enable(enable_fill),
+  .reset(reset_fill),
+  .clk(clk),
+  .adc_data(adc_data),
+  .r_finished(finished_fill),
+  .write_enable(write_enable),
+  .CounterX(CounterX_fill));
+
+clear clear_module(
+  .CounterX(CounterX_clear),
+  .CounterY(CounterY_clear),
+  .color(color_clear),
+  .clk(clk),
+  .enable(enable_clear),
+  .reset(reset_clear),
+  .finished(finished_clear));
+
+// module vga_sin(CounterX,CounterY,color,clk,enable,reset,finished,clk_adc,adc_data);
+input [1:0] time_division;
+wire [10:0] read_CounterX_sin;
+vga_sin sin_module(
+  .CounterX(CounterX_sin),
+  .color(color_sin),
+  .clk(clk),
+  .enable(enable_sin),
+  .reset(reset_sin),
+  .read_CounterX(read_CounterX_sin),
+  .time_division(time_division),
+  .finished(finished_sin));
+
+delay delay_module(
+  .clk(clk), 
+  .enable(enable_delay),
+  .reset(reset_delay), 
+  .finished(finished_delay));
+//  defparam delay_module.cycle ='d10008;
+
+parameter [1:0] clear_screen = 2'b00, draw_line = 2'b01, do_nothing = 2'b10, fill = 2'b11;
+
+output reg [1:0] state;
+reg [1:0] next_state;
+
+initial begin
+  state = clear_screen;
+end
+
+always @ (posedge clk)
+begin
+  if(rst_n == 1)
+    state <= clear_screen;
+  else
+    state <= next_state;
+end
+
+always @ * // combinational circuit
+  case(state)
+    clear_screen:
+    begin
+      enable_clear = 1;
+      reset_clear = 0;
+
+      enable_sin = 0;
+      reset_sin = 1;
+
+      enable_delay = 0;
+      reset_delay = 1;
+
+      enable_fill = 0;
+      reset_fill = 1;
+
+      CounterX = CounterX_clear;
+      CounterY = CounterY_clear;
+      color = color_clear;
+      if(finished_clear == 0)
+        next_state = clear_screen;
+      else
+        next_state = fill;
+    end
+    fill:
+    begin
+      enable_fill = 1;
+      reset_fill = 0;   
+
+      enable_clear = 0;
+      reset_clear = 1;
+
+      enable_sin = 0;
+      reset_sin = 1;
+
+      enable_delay = 0;
+      reset_delay = 1;
+
+      CounterX = 8'bzzzz_zzz;
+      CounterY = 8'bzzzz_zzz;
+      color = 12'bzzz_zzz_zzz_zzz;
+
+      if(finished_fill == 0)
+        next_state = fill;
+      else
+        next_state = draw_line;     
+
+    end
+    draw_line:
+    begin
+      enable_sin = 1;
+      reset_sin = 0;
+
+      enable_delay = 0;
+      reset_delay = 1;
+
+      enable_clear = 0;
+      reset_clear = 1;
+
+      enable_fill = 0;
+      reset_fill = 1;     
+
+      CounterX = CounterX_sin;
+      CounterY = ram_output + move_down - move_up;
+      color = color_sin;
+      if(finished_sin == 0)
+        next_state = draw_line;
+      else
+        next_state = do_nothing;
+    end
+    do_nothing:
+    begin
+      enable_delay = 1;
+      reset_delay = 0;
+
+      enable_clear = 0;
+      reset_clear = 1;
+
+      enable_sin = 0;
+      reset_sin = 1;
+
+      enable_fill = 0;
+      reset_fill = 1;     
+
+      CounterX = 8'bzzzz_zzz;
+      CounterY = 8'bzzzz_zzz;
+      color = 12'bzzz_zzz_zzz_zzz;
+      if(finished_delay == 0)
+        next_state = do_nothing;
+      else  
+        next_state = clear_screen;
+    end 
+  endcase
+
+endmodule
+
+\end{lstlisting}
+
+\subsubsection{modisign.v}
+
+\begin{lstlisting}[language=Verilog]
+module modisign(adc_data,vga_data,shift);
+
+// horizonal resize 
+input [13:0] adc_data;
+output reg [7:0] vga_data;
+
+input [3:0] shift; // 0, 1, 2, 3
+// matlab function provided for calculate bits real shift 
+
+
+// original center is 8191 {13[1]}, the center shift as well.
+always @ *
+begin
+  case(shift)
+  0:
+  begin
+    vga_data = (adc_data >> 7) - 4 ;
+  end
+  1:
+  begin
+    vga_data = (adc_data >> 8) + 28 ;
+  end
+  2:
+  begin
+    vga_data = (adc_data >> 9) + 44 ;
+  end
+  3:
+  begin
+    vga_data = (adc_data >> 10) + 52 ;
+  end
+  4:
+  begin
+    vga_data = (adc_data >> 6) - 68 ;
+  end
+  8:
+  begin
+    vga_data = (adc_data >> 5) - 196 ;
+  end
+  12:
+  begin
+    vga_data = (adc_data >> 4) - 452 ;
+  end
+  default:
+  begin
+    vga_data = (adc_data >> 7) - 4 ;
+  end
+
+  endcase
+end
+// values of data_shift :( as resolution goes lower
+// shift by 7: 4
+// shift by 8:
+
+endmodule
+\end{lstlisting}
+
+\subsubsection{ramfill.v}
+
+\begin{lstlisting}[language=Verilog]
+// module ramfill(clk_adc,enable,reset,finfished,adc_data,vga_data);
+module ramfill(clk_adc,enable,reset,r_finished,adc_data,CounterX,clk,write_enable);
+
+input clk_adc,clk;
+input enable,reset;
+input [13:0] adc_data;
+output reg write_enable;
+output reg r_finished;
+
+
+wire last_bit_data = adc_data[13];
+reg previous_adc_data;
+
+// wait until trigger happen
+always @ (posedge clk_adc)
+begin
+  previous_adc_data <= last_bit_data;
+  if(enable == 1)
+  begin
+    if(Trigger == 1) // unchanged until enable returns to 0.
+      write_enable <= 1;
+  end
+  else
+    write_enable <= 0;
+end
+
+reg Threshold1, Threshold2;
+always @(posedge clk_adc) Threshold1 <= (adc_data>=14'b10_000_000_000_000);
+always @(posedge clk_adc) Threshold2 <= Threshold1;
+
+wire Trigger = Threshold1 & ~Threshold2;  // if positive edge, trigger! 
+
+
+// sync clocks
+reg prolong_finished = 0;
+always @(posedge w_finished)
+begin
+  prolong_finished = prolong_finished + 1;
+end
+
+reg previous_signal;
+always @(posedge clk) // flip flop
+begin
+  previous_signal <= prolong_finished; 
+  r_finished <= previous_signal ^ prolong_finished;
+  // or with its previous value.
+end
+
+
+// build a 160 counter
+output reg [10:0] CounterX;
+
+wire CounterXmaxed = (CounterX=='d2047); // 2048 words for late down sampling
+wire w_finished;
+assign w_finished = (CounterXmaxed==1);
+
+
+always @(posedge clk_adc)
+begin
+  if(reset == 1)
+    CounterX <= 0;
+  else
+  begin
+  if(CounterXmaxed)
+      CounterX <= 0;
+  else if(write_enable == 1)
+      CounterX <= CounterX + 1;
+  end
+end
+
+endmodule
+
+\end{lstlisting}
+
+\subsubsection{vga\_sin.v}
+\begin{lstlisting}[language=Verilog]
+module vga_sin(CounterX,color,clk,enable,reset,finished,read_CounterX,time_division);
+// module vga_sin(CounterX,CounterY,color,clk,enable,reset,finished);
+// module vga_sin(CounterX,CounterY,color,clk,enable,reset,finished,clk_adc,adc_data);
+
+
+input clk;
+input enable,reset;
+input [1:0] time_division;
+wire [2:0] read_time_division = time_division + 1; // to avoid 0, start from 1
+
+output finished;
+output reg [7:0] CounterX;
+output [11:0] color;
+
+ 
+assign color = 12'hF00; // color to be drawn
+
+wire CounterXmaxed = (CounterX==8'd159); // 159
+assign finished = (CounterXmaxed==1);
+
+always @(posedge clk)
+begin
+  if(reset == 1)
+    CounterX <= 0;
+  else
+  begin
+  if(CounterXmaxed)
+      CounterX <= 0;
+  else if(enable == 1)
+      CounterX <= CounterX + 1;
+   end
+end
+
+output reg [10:0] read_CounterX;
+wire read_CounterX_Maxed = (read_CounterX >= 'd2047);
+always @(posedge clk)
+begin
+  if(reset == 1)
+    read_CounterX <= 0;
+  else
+  begin
+  if(read_CounterX_Maxed)
+      read_CounterX <= 0;
+  else if(enable == 1)
+      read_CounterX <= read_CounterX + read_time_division;
+   end
+end
+
+// endmodule
+
+// module collect_data(clk_adc,enable,reset,finished,data_in,data_out,read_busy);
+// input clk_adc;
+// input [13:0] adc_data;
+
+// output [7:0] CounterY;
+
+// // for the moment, the fifo will read the data when the drawer is off continously until full. The word length is not
+// // correct as well, it 128 instead of 120.. Going to implmented the trigger after testing the adc
+// //module collect_data(clk_adc,clk,enable,reset,finished,data_in,data_out,read_busy);
+
+// collect_data fifo_entity(
+//  .clk_adc(clk_adc),
+//  .clk(clk),
+//  .data_in(adc_data),
+//  .data_out(CounterY), 
+//  .read_busy(~enable)); //"when enabled it is busy to draw on the screen, usually, enable is the opposite of reset and finifhsed
+  
+endmodule
+
+\end{lstlisting}
+
+\subsubsection{sel\_clk.v}
+\begin{lstlisting}[language=Verilog]
+module sel_clk(clk1,clk2,clk3,in_p,clk_62);
+
+input clk1,clk2,clk3;
+input [1:0] in_p;
+
+output reg clk_62;
+
+always @(in_p)
+begin
+  case(in_p)
+    'd0:clk_62 = clk1;
+    'd1:clk_62 = clk2;
+    'd2:clk_62 = clk3;
+    default: clk_62 = clk1;
+  endcase
+end
+
+endmodule
+\end{lstlisting}
+
+\subsubsection{signal\_gen.v}
+\begin{lstlisting}[language=Verilog]
+module sign_gen(clk_dac,value,enable,reset,finished,switch);
+
+input clk_dac;
+input enable,reset;
+output finished;
+
+
+// 4 ram block with different initial momeory.
+sin_test sin_entity(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val1));
+sin_test1 sin_entity1(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val2));
+sin_test2 sin_entity2(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val3));
+sin_test3 sin_entity3(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val4));
+
+sin_test1 sin_entity1(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val2));
+
+sin_test2 sin_entity2(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val3));
+
+sin_test3 sin_entity3(
+  .address(CounterX),
+  .clock(clk_dac),
+  .wren(1'b0), 
+  .q(val4));
+
+
+
+
+input switch;
+reg [1:0] re_switch;
+
+wire [13:0] val1,val2,val3,val4;
+output reg [13:0] value;
+
+initial
+begin
+  re_switch <= 'b00;
+end
+
+always @ (posedge switch)
+  re_switch <= re_switch + 1'b1;
+
+always @ *
+  case(re_switch)
+  'b00:
+  value = val1;
+  'b01:
+  value = val2;
+  'b10:
+  value = val3;
+  'b11:
+  value = val4;
+  endcase
+
+
+
+
+
+
+reg [9:0] CounterX;
+// a 1024 counter
+// module vga_sin(CounterX,color,clk,enable,reset,finished,read_CounterX,time_division);
+wire CounterXmaxed = (CounterX=='d1023); // samples 1024
+wire finished;
+assign finished = (CounterXmaxed==1);
+
+
+always @(posedge clk_dac)
+begin
+  if(reset == 1)
+    CounterX <= 0;
+  else
+  begin
+  if(CounterXmaxed)
+      CounterX <= 0;
+  else if(enable == 1)
+      CounterX <= CounterX + 1;
+  end
+end
+
+endmodule
+
+\end{lstlisting}
 
 \bibliographystyle{plain}
 \bibliography{bibliography} 

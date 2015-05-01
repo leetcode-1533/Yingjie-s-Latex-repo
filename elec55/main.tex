@@ -61,7 +61,7 @@
 \subsection{Objective}
 The main objective of this project is to build a digital Oscilloscope based on FPGA using \textit{verilog} language and \textit{Schematic Design}. In general, I am required to read the data from the AD converter and then mapping the data onto monitor via VGA according to a specifically designed timing sequence.
 \subsection{Main Aspect}
-After one month of works, I have successfully implemented the primary goal, which is to mapping the AD data onto VGA. Not only so, an edge triggering mechanism is implemented for providing a static image, a arbitrary function generator is also implemented as a byproduct of this project. Oscilloscope itself is fully configurable, we can use the switches to control the sample frequency, wave time division, wave center location and wave amplitude. \\
+After one month of works, I have successfully implemented the primary goal, which is to mapping the AD data onto VGA. Not only so, an edge triggering mechanism is implemented for providing a static image, an arbitrary function generator is also implemented as a byproduct of this project. Oscilloscope itself is fully configurable, we can use the switches to control the sample frequency, wave time division, wave center location and wave amplitude. \\
 
 Below is the project result:
 
@@ -78,7 +78,7 @@ Below is the project result:
 \end{center}
 
 
-The board I was working is called \textit{DE2-35}, which is a implementation of the Altera Cyclone\textregistered II FPGA chip 2C35 and the chip code is EP2C35F672C6. The board itself is designed for the purpose of evaluation and education and itself is built in with all sorts of basic components, \textit{i.e.} switches, push button, LCD screen, VGA modulator, GPIO pins etc. Beside from the FPGA board, I also used THDB\_ADA(ADA) daughter board for doing AD and DA conversion. Below is the specification of the chip and the AD-DA daughter board according to \cite{DE2UserManual} and \cite{addaman}.
+The board I was working on is called \textit{DE2-35}, which is an implementation of the Altera Cyclone\textregistered II FPGA chip 2C35 and the chip code is EP2C35F672C6. The board itself is designed for the purpose of evaluation and education and itself is built in with all sorts of basic components, \textit{i.e.} switches, push button, LCD screen, VGA modulator, GPIO pins etc. Beside from the FPGA board, I also used THDB\_ADA(ADA) daughter board for doing AD and DA conversion. Below is the specification of the chip and the AD-DA daughter board according to \cite{DE2UserManual} and \cite{addaman}.
 
 \paragraph{The technical specification of the AD-DA daughter}
 
@@ -92,7 +92,7 @@ The board I was working is called \textit{DE2-35}, which is a implementation of 
     \item 33,216 LEs
     \item 105 M4K RAM blocks
     \item 483,840 total RAM bits
-    \item 35 embedded multipliers
+    \item 35 lembedded multipliers
     \item 4PLLs
     \item 475 user I/O pins
     \item FineLine BGA 672-pin package
@@ -100,12 +100,12 @@ The board I was working is called \textit{DE2-35}, which is a implementation of 
 
 For the software part of the project, a variety of software was used, I used \textit{quartus} for compiling the source code and downloading the program onto the board using JTAG. \textit{Git} for managing the development of the code. \textit{iverilog} for debugging. \textit{Matlab} for doing calculation and generating .mif file. \textit{verilog HDL} is the programming language.\\
 
-The project itself is host at \textit{https://github.com/y1275963/vga\_basics}. With around 24 branches and 80 commits.\\
+The project itself is hosted at \textit{https://github.com/y1275963/vga\_basics}. With around 24 branches and 80 commits.\\
 
 
 \section{Board Specification}
 \subsection{Board Details}
-For the board itself, I implemented a single route oscilloscope at the sampling frequency of 13.5Mhz or 27Mhz or 54Mhz and an arbitary single route capable of generating wave at the base frequency of 97.66Khz and of the data point of 1024 points.%100
+For the board itself, I implemented a single route oscilloscope at the sampling frequency of 13.5Mhz or 27Mhz or 54Mhz and an arbitrary single route capable of generating wave at the base frequency of 97.66Khz and of the data point of 1024 points.%100
 \subsection{The controlling method}
 
 Below is the supported control method:
@@ -124,13 +124,13 @@ Below is the supported control method:
 
 \begin{itemize}
     \item Switch 17:
-    Switch for turning the monitor on or off.
+    Switch for turning the monitor on and off.
     \item Switch 16:
     Switch for stoping refreshing the screen.
     \item Switch 15:
     Switch for letting the screen only show the background.
     \item Switch 13-14:
-    Switch for changing time division by changing sampling frequency.
+    Switches for changing time division by changing sampling frequency.
     
     Specifically:
     \begin{itemize}
@@ -147,26 +147,26 @@ Below is the supported control method:
     Specifically:
     \begin{itemize}
         \item Switch 12 and 11 both off:
-        Sample at normal speed.
+        Sampling at normal speed.
         \item Switch 12 off and 11 on:
-        Sample at 1 time faster normal speed.
+        Sampling at 1 time faster normal speed.
         \item Switch 12 on and 11 off:
-        Sample at 2 time faster normal speed.
+        Sampling at 2 time faster normal speed.
         \item Switch 12 and 11 both on:
-        Sample at 3 time faster normal speed.
+        Sampling at 3 time faster normal speed.
     \end{itemize}
     \item Switch 8-10:
     Supporting for shift the wave up.
     
-    When switch is both off, no shift is made. And by turing it on or off, we can achieve shifting by 1,2,3,4,5,6,7 pixel above the central line.
+    When switch is both off, no shift is made. And by turning it on or off, we can achieve shifting by 1,2,3,4,5,6,7 pixel above the central line.
     \item Switch 5-7:
     Supporting for shift the wave down.
     
-    When switch is both off, no shift is made. And by turing it on or off, we can achieve shifting by 1,2,3,4,5,6,7 pixel below the central line.
+    When switch is both off, no shift is made. And by turning it on or off, we can achieve shifting by 1,2,3,4,5,6,7 pixel below the central line.
     \item Switch 1-4:
     Supporting for changing the amplitude of the wave.
     
-    The changing of the factor is done by a factor of 2. And switch 4-3 allowing for scale up, switch 2-1 allowing for scale down.
+    The changing factor is done by a factor of 2. And switch 4-3 allowing for scale up, switch 2-1 allowing for scale down.
 %    Specifically:
 %    \begin{itemize}
 %        \item Switch 4 and 3 both off:
@@ -183,7 +183,7 @@ Below is the supported control method:
     Supporting for turning the function generator on and off.
     
     \item Push button 0:
-    Supporting for changing the signal generator generated wave. The design itself allowing the program to record 4 sets of arbitrary waves before compiling the program. (Matlab program is provided for generating such wave) 
+    Supporting for changing the signal generator generated wave. The design itself allowing the program to record 4 sets of arbitrary waves before compiling the program. (Matlab program \ref{sec:correct} is provided for generating such wave) 
 \end{itemize}
 
 \subsection{The measuring method}

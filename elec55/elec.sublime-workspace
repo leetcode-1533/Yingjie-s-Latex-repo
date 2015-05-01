@@ -1,0 +1,265 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 44066,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/Default (OSX).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 14105,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"selected_items":
+		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Preferences: MarkdownEditing Settings – Default"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
+		"/Users/y1275963/Documents/latex/elec55/main.tex",
+		"/Users/y1275963/consistent-trees/read_tree/example.c",
+		"/Users/y1275963/Library/Containers/com.evernote.Evernote/Data/Library/Application Support/com.evernote.Evernote/accounts/www.evernote.com/42464270/external-edits/35BEF86D-E7AA-4035-9956-3704C91C7963/README.md",
+		"/Users/y1275963/Desktop/untitled folder/README",
+		"/Users/y1275963/Library/Caches/TemporaryItems/BetterZip Temporary Folder.3SWEQU/BetterZip Temporary Folder.Mxlv1m/zhuming_hao/peruse-a-rue/README.md",
+		"/Users/y1275963/consistent-trees/README.md",
+		"/Users/y1275963/Library/Containers/it.bloop.airmail2/Data/Library/Application Support/Airmail/General/Plugins/Wunderlist-AMPlug-master/README.md",
+		"/Users/y1275963/Library/Containers/com.evernote.Evernote/Data/Library/Application Support/com.evernote.Evernote/accounts/www.evernote.com/42464270/external-edits/11AD9909-EC3C-4D2D-A515-867890704707/letter_to_professor.md",
+		"/Users/y1275963/ass3/data/darkskysims-data_release-99a0e7445c96/README.md",
+		"/Users/y1275963/y1275963.github.io/_posts/2015-04-04-foward-dtftdiscrite-time-fourier-transform-visualiztion-using-python.md",
+		"/Users/y1275963/Library/Containers/com.evernote.Evernote/Data/Library/Application Support/com.evernote.Evernote/accounts/www.evernote.com/42464270/external-edits/DD0F22AB-6A6D-4B54-868E-7C984D4D78D8/letter_to_professor.md",
+		"/Users/y1275963/y1275963.github.io/_posts/wordpress/2013-12-02-8b.markdown",
+		"/Users/y1275963/y1275963.github.io/_posts/2015-03-29-matlab-implementation-of-the-simplest-one.md",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/Markdown (Standard).sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/MarkdownEditing/README.md",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/MarkdownEditing/Markdown (Standard).sublime-settings",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/MarkdownEditing/MultiMarkdown.sublime-settings",
+		"/Users/y1275963/y1275963.github.io/_posts/2015-03-22-basics.md",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/y1275963/Desktop/test.mdown",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"highlight",
+			"hightlight",
+			"theme"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.tex",
+					"settings":
+					{
+						"buffer_size": 44066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7267,
+								7267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 23447.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/Default (OSX).sublime-keymap",
+					"settings":
+					{
+						"buffer_size": 14105,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1000.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 156.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

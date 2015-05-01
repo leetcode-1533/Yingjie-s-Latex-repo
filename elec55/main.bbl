@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{DE2UserManual}
+Altera.
+\newblock {\em DE2UserManual}.
+
+\bibitem{fifo}
+ALTRA.
+\newblock {\em SCFIFO and DCFIFO IP Cores User Guide}.
+\newblock ALTRA, 101 Innovation Drive, San Jose, CA 95134, 12 2014.
+
+\bibitem{trigger}
+fpga4fun.com.
+\newblock http://www.fpga4fun.com/digitalscope\_hdl3.html.
+
+\bibitem{vgaadaptor}
+University of~Toronto.
+\newblock
+  http://www.eecg.utoronto.ca/~jayar/ece241\_07f/vga/vga-interface.html.
+
+\bibitem{addaman}
+www.terasic.com.
+\newblock {\em THDB}.
+\newblock terasic.
+
+\end{thebibliography}

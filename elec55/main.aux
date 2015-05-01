@@ -1,0 +1,104 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Objective}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Main Aspect}{2}}
+\citation{DE2UserManual}
+\citation{addaman}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces This is the working result. The oscilloscope is reading the value from the generator}}{3}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline The technical specification of the AD-DA daughter}{3}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline The technical specification of the chip EP2C35F672C6}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Board Specification}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Board Details}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}The controlling method}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces This is the overall view of the controlling method.}}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The measuring method}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces This is the status indicator.}}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces This is switch indicator.}}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}The workflow}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces This is the workflow of the oscilloscope.}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces This is the workflow of the oscilloscope.}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces This is workflow of the function generator.}}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Implementation Details}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The Counter}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}The basic Counter}{9}}
+\newlabel{sec:bascount}{{3.1.1}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Jumping Counter}{9}}
+\newlabel{sec:jumcount}{{3.1.2}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Counter on top of the Counter}{10}}
+\newlabel{sec:coucount}{{3.1.3}{10}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}iverilog output for testing}{11}}
+\citation{fifo}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The RAM}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}One Port reading only RAM}{12}}
+\newlabel{sec:siram}{{3.2.1}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Dual Port RAM}{13}}
+\newlabel{sec:duram}{{3.2.2}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces There is a periodic unsolvable overflow problem at each image when using FIFO.}}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces This is simulation of the synchronization of the finished clock.}}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}The Status Machine}{14}}
+\newlabel{sec:status}{{3.3}{14}}
+\citation{trigger}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}The Trigger}{16}}
+\newlabel{sec:trigger}{{3.4}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}PLL}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces This is the first PLL.}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces This is the second PLL.}}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}University Provided modules}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}The VGA Adaptor Module}{17}}
+\newlabel{sec:vga}{{3.6.1}{17}}
+\citation{vgaadaptor}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces This is the VGA Adaptor.}}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}The AD-DA Adaptor Module}{18}}
+\newlabel{sec:adda}{{3.6.2}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces This is the AD\discretionary {-}{}{}DA Adaptor PLL.}}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Matlab code}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.1}Matlab code for RAM initialization file}{19}}
+\newlabel{sec:correct}{{3.7.1}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces This is the background image.}}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.2}Matlab code for doing measurement}{21}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Measuring Frequency}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Frequency measurement, reading from switch 14-13 is 01 and reading from switch 12 to 11 is 11. There is around 4.5 waves on the screen.}}{21}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Measuring Amplitude}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces This is the overall view of the controlling method.}}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.3}Matlab code for setting up refresh rate}{23}}
+\newlabel{sec:refresh}{{3.7.3}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.7.4}Matlab code for calculating biased shift}{23}}
+\newlabel{sec:biased}{{3.7.4}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Module Specification}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}VGA Module}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}AD-DA Module}{24}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline AD module}{24}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline DA module}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Status Machine Module}{24}}
+\newlabel{sec:statusm}{{4.3}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Drawing Background Module}{24}}
+\newlabel{sec:back}{{4.4}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Drawing Wave Module}{24}}
+\newlabel{sec:wave}{{4.5}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Storing AD Data Module}{24}}
+\newlabel{sec:fill}{{4.6}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Pause Module}{24}}
+\newlabel{sec:pause}{{4.7}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Sampling rate switch module}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Resize module}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion and potential works}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Frequency Table}{25}}
+\newlabel{sec:fre}{{6.1}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Amplitude Table}{26}}
+\newlabel{sec:amp}{{6.2}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Development History}{26}}
+\gdef \LT@i {\LT@entry 
+    {3}{68.50635pt}\LT@entry 
+    {1}{63.10005pt}\LT@entry 
+    {3}{420.53699pt}}
+\bibstyle{plain}
+\bibdata{bibliography}
+\bibcite{DE2UserManual}{1}
+\bibcite{fifo}{2}
+\bibcite{trigger}{3}
+\bibcite{vgaadaptor}{4}
+\bibcite{addaman}{5}
+\newlabel{LastPage}{{}{28}}
+\xdef\lastpage@lastpage{28}
+\gdef\lastpage@lastpageHy{}

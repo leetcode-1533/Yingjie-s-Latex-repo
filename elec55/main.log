@@ -1,0 +1,1185 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  1 MAY 2015 09:59
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex -recorder
+(./main.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2013/12/19 v3.12 KOMA-Script document class (article)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
+
+Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) (/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 115.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 116.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 117.
+Package scrartcl Info: You've used standard option `11pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=11pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=11pt' there
+(scrartcl)             instead of `11pt', too.
+Class scrartcl Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 1531.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (11pt
+)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
+
+Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
+\ta@div=\count79
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+\footheight=\skip45
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 418.25555pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 17.3562pt
+(typearea)              \oddsidemargin  = 17.3562pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1330.
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\c@pti@nb@sid@b@x=\box26
+\c@figure=\count86
+\c@table=\count87
+\bibindent=\dimen102
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip48
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count88
+\LTcapwidth=\dimen103
+\LT@head=\box27
+\LT@firsthead=\box28
+\LT@foot=\box29
+\LT@lastfoot=\box30
+\LT@cols=\count89
+\LT@rows=\count90
+\c@LT@tables=\count91
+\c@LT@chunks=\count92
+\LT@p@ftn=\toks15
+)
+Class scrartcl Info: longtable captions redefined on input line 5.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box31
+\lst@token=\toks16
+\lst@length=\count94
+\lst@currlwidth=\dimen104
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen105
+\lst@width=\dimen106
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen107
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box32
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip53
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen108
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen109
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count102
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count103
+\leftroot@=\count104
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count105
+\DOTSCASE@=\count106
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box33
+\strutbox@=\box34
+\big@size=\dimen110
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count107
+\c@MaxMatrixCols=\count108
+\dotsspace@=\muskip10
+\c@parentequation=\count109
+\dspbrk@lvl=\count110
+\tag@help=\toks18
+\row@=\count111
+\column@=\count112
+\maxfields@=\count113
+\andhelp@=\toks19
+\eqnshift@=\dimen111
+\alignsep@=\dimen112
+\tagshift@=\dimen113
+\tagwidth@=\dimen114
+\totwidth@=\dimen115
+\lineht@=\dimen116
+\@envbody=\toks20
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen117
+\enit@toks=\toks22
+\enit@inbox=\box35
+\enitdp@description=\count114
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+
+Class scrartcl Warning: Usage of package `fancyhdr' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use 
+(scrartcl)              package `scrpage2' or `scrlayer-scrpage'.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `fancyhdr' on input line 42.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip57
+\f@ncyO@elh=\skip58
+\f@ncyO@erh=\skip59
+\f@ncyO@olh=\skip60
+\f@ncyO@orh=\skip61
+\f@ncyO@elf=\skip62
+\f@ncyO@erf=\skip63
+\f@ncyO@olf=\skip64
+\f@ncyO@orf=\skip65
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 52.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 52.
+\c@lstlisting=\count115
+
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count116
+\scratchdimen=\dimen120
+\scratchbox=\box36
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen121
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 52.
+
+(./main.toc <logo.png, id=1, 189.3474pt x 66.9702pt>
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 35.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (0.0pt): 
+ Make it at least 37.56505pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+
+ <./logo.png>])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+<IMG_1388.JPG, id=13, 3276.24pt x 2457.18pt>
+File: IMG_1388.JPG Graphic file (type jpg)
+ <use IMG_1388.JPG>
+Package pdftex.def Info: IMG_1388.JPG used on input line 73.
+(pdftex.def)             Requested size: 491.41481pt x 368.5611pt.
+
+Overfull \hbox (38.44685pt too wide) in paragraph at lines 73--74
+[][] 
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 78.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [2]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 94.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [3 <./IMG_1388.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+<apr.jpg, id=22, 1284.8pt x 803.0pt>
+File: apr.jpg Graphic file (type jpg)
+ <use apr.jpg>
+Package pdftex.def Info: apr.jpg used on input line 118.
+(pdftex.def)             Requested size: 128.48752pt x 80.3047pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 143.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [4 <./apr.jpg>] <IMG_1386.JPG, id=26, 3276.24pt x 2457.18pt>
+File: IMG_1386.JPG Graphic file (type jpg)
+ <use IMG_1386.JPG>
+Package pdftex.def Info: IMG_1386.JPG used on input line 201.
+(pdftex.def)             Requested size: 163.8216pt x 122.8662pt.
+File: logo.png Graphic file (type png)
+
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 206.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [5] <IMG_1387.JPG, id=30, 3276.24pt x 2457.18pt>
+File: IMG_1387.JPG Graphic file (type jpg)
+
+<use IMG_1387.JPG>
+Package pdftex.def Info: IMG_1387.JPG used on input line 233.
+(pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 238.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [6 <./IMG_1386.JPG>]
+<schematic.png, id=34, 855.195pt x 356.33125pt>
+File: schematic.png Graphic file (type png)
+ <use schematic.png>
+Package pdftex.def Info: schematic.png used on input line 252.
+(pdftex.def)             Requested size: 427.59647pt x 178.16518pt.
+
+<adchar.png, id=35, 745.78625pt x 647.41875pt>
+File: adchar.png Graphic file (type png)
+ <use adchar.png>
+Package pdftex.def Info: adchar.png used on input line 266.
+(pdftex.def)             Requested size: 372.89221pt x 323.70857pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 271.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[7 <./IMG_1387.JPG> <./schematic.png>]
+<dachart.png, id=41, 575.14874pt x 316.18124pt>
+File: dachart.png Graphic file (type png)
+ <use dachart.png>
+Package pdftex.def Info: dachart.png used on input line 278.
+(pdftex.def)             Requested size: 345.0919pt x 189.7102pt.
+File: logo.png Graphic file (type png)
+
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 290.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [8 <./adchar.png> <./dachart.png>]
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/03/04 1.5c listings language file
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/03/04 1.5c listings language file
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 320.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 320.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 340.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[9]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 400.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [10]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 458.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [11]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 478.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 478.
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 478
+.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 512.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[12] <IMG_1389.JPG, id=67, 3276.24pt x 2457.18pt>
+File: IMG_1389.JPG Graphic file (type jpg)
+ <use IMG_1389.JPG>
+Package pdftex.def Info: IMG_1389.JPG used on input line 518.
+(pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 514--523
+[][]
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 551.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [13 <./IMG_1389.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
+
+ []
+
+<dualram.png, id=72, 890.32625pt x 245.91875pt>
+File: dualram.png Graphic file (type png)
+ <use dualram.png>
+Package pdftex.def Info: dualram.png used on input line 561.
+(pdftex.def)             Requested size: 445.16203pt x 122.95906pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 557--566
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
+
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 601.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [14 <./dualram.png>]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 667.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [15]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 734.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 744--745
+
+ []
+
+<pll1.png, id=83, 863.225pt x 188.705pt>
+File: pll1.png Graphic file (type png)
+ <use pll1.png>
+Package pdftex.def Info: pll1.png used on input line 757.
+(pdftex.def)             Requested size: 431.61145pt x 94.35226pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 753--762
+[][]
+ []
+
+<pll2.png, id=84, 562.1pt x 208.78pt>
+File: pll2.png Graphic file (type png)
+ <use pll2.png>
+Package pdftex.def Info: pll2.png used on input line 769.
+(pdftex.def)             Requested size: 281.04932pt x 104.38972pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 765--774
+[][]
+ []
+
+<vga.png, id=85, 361.35pt x 188.705pt>
+File: vga.png Graphic file (type png)
+ <use vga.png>
+Package pdftex.def Info: vga.png used on input line 784.
+(pdftex.def)             Requested size: 361.34912pt x 188.70453pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 780--789
+[][]
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 789.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [17 <./pll1.png> <./pll2.png>]
+<adda.png, id=91, 430.60875pt x 238.8925pt>
+File: adda.png Graphic file (type png)
+ <use adda.png>
+Package pdftex.def Info: adda.png used on input line 800.
+(pdftex.def)             Requested size: 430.60768pt x 238.8919pt.
+
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 796--805
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--812
+
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 812.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [18 <./vga.png> <./adda.png>]
+<temp.png, id=97, 281.05pt x 175.65625pt>
+File: temp.png Graphic file (type png)
+ <use temp.png>
+Package pdftex.def Info: temp.png used on input line 860.
+(pdftex.def)             Requested size: 281.0493pt x 175.6558pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 865.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+
+[19]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 911.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [20 <./temp.png (PNG copy)>]
+File: IMG_1388.JPG Graphic file (type jpg)
+ <use IMG_1388.JPG>
+Package pdftex.def Info: IMG_1388.JPG used on input line 961.
+(pdftex.def)             Requested size: 163.8216pt x 122.8662pt.
+File: logo.png Graphic file (type png)
+
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 969.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [21]
+File: apr.jpg Graphic file (type jpg)
+ <use apr.jpg>
+Package pdftex.def Info: apr.jpg used on input line 1016.
+(pdftex.def)             Requested size: 128.48752pt x 80.3047pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1027.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [22]
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 1084.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [23]
+File: logo.png Graphic file (type png)
+
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1125.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1153--1153
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1153--1153
+[]\OT1/cmr/m/n/10.95 00| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 42187.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 126562.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 210937.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 295312.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+[]\OT1/cmr/m/n/10.95 379687.5| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1163--1163
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1163--1163
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 21093.75| 
+ []
+
+
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 42187.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 63281.25| 
+ []
+
+
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 105468.75| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 126562.5| 
+ []
+
+
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 147656.25| 
+ []
+
+
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 189843.75| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+[]\OT1/cmr/m/n/10.95 210937.5| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 00| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 1012500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 1350000| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 1687500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 2025000| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 2362500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 2700000| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 3037500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+[]\OT1/cmr/m/n/10.95 3375000| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 1012500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 1181250| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 1350000| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 1518750| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+[]\OT1/cmr/m/n/10.95 1687500| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1183--1183
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1183--1183
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1183--1183
+[]\OT1/cmr/m/n/10.95 1012500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1183--1183
+[]\OT1/cmr/m/n/10.95 1125000| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1188--1188
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1188--1188
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 00| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 1012500| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 1181250| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 1350000| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 1518750| 
+ []
+
+
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+[]\OT1/cmr/m/n/10.95 1687500| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1198--1198
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1198--1198
+[]\OT1/cmr/m/n/10.95 01| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1203--1203
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1203--1203
+[]\OT1/cmr/m/n/10.95 10| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 11| 
+ []
+
+
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 42187.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 126562.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 210937.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 295312.5| 
+ []
+
+
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+[]\OT1/cmr/m/n/10.95 379687.5| 
+ []
+
+
+Overfull \hbox (276.02002pt too wide) in paragraph at lines 1148--1208
+[][] 
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1247.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [25]
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1251--1271
+ [] [] [] 
+ []
+
+
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1271--1291
+ [] [] [] 
+ []
+
+
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1291--1311
+ [] [] [] 
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1311.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [26]
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1311--1329
+ [] [] [] 
+ []
+
+(./main.bbl
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 7.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [27]
+Underfull \hbox (badness 10000) in paragraph at lines 17--20
+[]\OT1/cmr/m/n/10.95 University of Toronto.  http://www.eecg.utoronto.ca/ ja-ya
+r/ece241[]07f/vga/vga-
+ []
+
+) 
+AED: lastpage setting LastPage
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1336.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [28] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 6925 strings out of 493117
+ 101769 string characters out of 6135433
+ 397868 words of memory out of 5000000
+ 10267 multiletter control sequences out of 15000+600000
+ 12090 words of font info for 44 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 47i,17n,51p,645b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-supe
+r/cm-super-ts1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
+bx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
+b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on main.pdf (28 pages, 5484856 bytes).
+PDF statistics:
+ 181 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+

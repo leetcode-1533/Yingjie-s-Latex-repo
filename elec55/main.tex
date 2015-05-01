@@ -51,7 +51,7 @@
 
 \begin{document}
 \title{ELEC5563 Individual Project}
-\subtitle{ Implementation of Counter, Status Machine, function generator and oscilloscope on the FPGA using Verilog HDL}
+\subtitle{ Implementation of Counter, State Machine, function generator and oscilloscope on the FPGA using Verilog HDL}
 \author{Yingjie Luan}
 \maketitle
 
@@ -115,7 +115,7 @@ Below is the supported control method:
 %\label{fig:main}
 
 {
-\includegraphics[scale = 0.1]{apr.jpg}
+\includegraphics[scale = 0.08]{control.JPG}
 \captionof{figure}{This is the overall view of the controlling method.}
 }
 \end{minipage}
@@ -187,40 +187,40 @@ Below is the supported control method:
 \end{itemize}
 
 \subsection{The measuring method}
-Below is the supported monitor method to get the data from the board.
+Below is the supported measuring method to get the data from the board.
 \begin{itemize}
     \item The VGA monitor
     
-    The monitor is the main source of information. We can use it to see the shape of the wave. Beside from this, because the regular grid is implemented as the background, measurement is made possible. A measurement table is provided for measuring the frequency and the amplitude of the wave. 
-    \item The status machine debugger
+    The monitor is the main source of information. We can use it to see the shape of the wave. Beside from this, because the regular grid is implemented as the background, measurement is made possible. Two measurement tables \ref{sec:fre} \ref{sec:amp} are provided for measuring the frequency and the amplitude of the wave. 
+    \item The state machine debugger
     \begin{center}     
 \begin{minipage}[t]{\linewidth}
 %\label{fig:main}
 
 {
 \includegraphics[scale = 0.05]{IMG_1386.JPG}
-\captionof{figure}{This is the status indicator.}
+\captionof{figure}{This is the state indicator.}
 }
 \end{minipage}
 \medskip
 \end{center}
 
-     LED Green 7 and 6 are implemented for indicating status machine's current status.( Image blow)
+     LED Green 7 and 6 are implemented for indicating state machine's current state.( Image blow)
 
     
     Below is the meaning of the light:
     \begin{itemize}
-        \item LED 7 is on, 6 is on, Status 11:
-         Meaning that the system is sampling from the AD convert.
-         \item LDE 7 is on, 6 is off, Status 10:
+        \item LED 7 is on, 6 is on, state 11:
+         Meaning that the system is sampling.
+         \item LDE 7 is on, 6 is off, state 10:
          Meaning that the system is delayed, to moderate the refresh rate down to around 50hz.
-         \item LED 7 is off, 6 is on, Status 01:
+         \item LED 7 is off, 6 is on, state 01:
          Meaning that the system is drawing the wave from the RAM according to the sampled signal.
-         \item LED 7 is off, 6 is off, Status 00:
+         \item LED 7 is off, 6 is off, state 00:
          Meaning that the system is clean the screen by redrawing a regular grid background.
          
     \end{itemize}  
-      In reality, as we can see from the image above, because the system is the status of delay for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(Status 10).
+      In reality, as we can see from the image above, because the system is the state of delay for most of its functioning time, we can see LED 7 is always on, and LED 6 is glimmering. Which means the system spent most of its time in delaying(state 10).
       \item Switch indicator
       
       The switch indicator is used to indicator which switch is on or off, as we can see from the image below:
@@ -256,7 +256,7 @@ This is the overall schematic chart:
 \medskip
 \end{center}
 
-The board will execute two job simultaneously, below is the flowchart of the Oscilloscope:
+The board will execute two jobs simultaneously, below is the flowchart of the Oscilloscope:
 
 \begin{center}
 \begin{minipage}[t]{\linewidth}
@@ -285,17 +285,17 @@ Below is the flowchart of the arbitrary function generator:
 
 \section{Implementation Details}
 \subsection{The Counter}
-The counter is the building block of the entire project and it is used throughout the entire project. Below is the detailed list of the usage of the counter:
+The counter is the building block of the entire project and it is used throughout the entire project. Below is the detailed list of the application of the counters:
 \begin{itemize}
-    \item In Drawing process:
+    \item In drawing process:
      Counters are used to provide VGA the pixel coordinates.
      \item In delay process:
      Counter is used to crate a delay to lower down the refresh rate.
-     \item In Sampling process and AD process:
+     \item In sampling process and AD process:
     Counter is used to provide the RAM with memory index. A counter in sampling process also support downsampling the RAM.
 \end{itemize}
 
-To connect counters with status machine, all the counter is implemented 2 input signals and 1 output signal:
+To connect counters with state machine, all the counters are implemented with 2 input signals and 1 output signal:
 \begin{itemize}
     \item enable: To start the counter
     \item reset: To reset the counter
@@ -333,7 +333,7 @@ By setting the value of the maximum value of the counter, we can manage to let t
 \subsubsection{Jumping Counter}
 \label{sec:jumcount}
 
-The downsampling is implemented by downsampling the output of the RAM instead of downsampling the output from the AD convert from the simple fact the the system can endure a little bit more delay.(Moreover, an explicit delay is implemented).
+The downsampling is implemented by downsampling the output of the RAM instead of downsampling the output from the AD converter.
 
 To support the downsampling, we simply change the increment factor of the counter and hence we change the RAM address we are going to access, below is an example of the jumping counter:
  
@@ -487,9 +487,9 @@ It would be good if we can write some test bench with RAM, but because it is a M
 
 The RAM is used throughout the project as well, below is a list of its usage:
 \begin{itemize}
-    \item In clean process: A RAM is used to provide the image of the grid which is going to be drawn.
+    \item In clean process: A RAM is used to provide the grid image which is going to be drawn.
     \item In sampling process: A RAM is used to store the sampling information
-    \item In drawing process: The same RAM is used to retrieve information from the RAM.
+    \item In drawing process: The same RAM is used to retrieve stored sampled data.
     \item In DA process: 4 RAMs are used to store the pro recored wave information. 
     \end{itemize}
 \subsubsection{One Port reading only RAM}
@@ -504,7 +504,7 @@ ram_background ram_entity(
  	.q(rambuffer));
 endmodule
 \end{lstlisting}
-And we just get the information from the address which is defined by our counter.
+The \textit{address} nets are defined by other counters.
 
 \subsubsection{Dual Port RAM}
 \label{sec:duram}
@@ -547,9 +547,9 @@ begin
 end
 \end{lstlisting}
 
-The writing finished signal will change the status of a flip-flop register, and the reading clock will be constantly detecting the level of the register and when  it detects the difference it will output a reading finished signal.
+The writing finished signal will change the state of a flip-flop register, and the reading clock will be constantly detecting the level of the register and when  it detects the difference it will output a reading finished signal.
 
-By doing so, I successfully made the writing finished clock readable from the reading cycle. Therefor, the status machine will be able to detect if the sampling is finished at a different clock.\\
+By doing so, I successfully made the writing finished clock readable from the reading cycle. Therefor, the state machine will be able to detect if the sampling is finished at a different clock.\\
 
 
 Below is a simulation result:
@@ -564,14 +564,14 @@ Below is a simulation result:
 \end{minipage}
 \medskip
 
-\subsection{The Status Machine}
-\label{sec:status}
-The status machine runs at the pixel refresh rate, which is 25Mhz, and it is the main block of the whole project. \\
+\subsection{The state Machine}
+\label{sec:state}
+The state machine runs at the pixel refresh rate, which is 25Mhz, and it is the main block of the whole project. \\
 
 
-The implementation of status machine goes as the following, Whenever a status's mission is finished it will define a next state. And there is a cycle to change the status accordingly. 
+The implementation of state machine goes as the following, Once a state is finished a new state will be defined. And the state machine changes its state accordingly. 
 
-For all the statuses, it always goes from enabling its module and reseting all the others modules. \\
+For all the states, it always goes from enabling its module and reseting all the others modules by using \textit{enable}, \textit{reset} and \textit{finished}. \\
 
 
 It is separated in 4 stages:
@@ -579,7 +579,7 @@ It is separated in 4 stages:
     \item clean:
     Call the clean module to clean the screen, and it goes to \textit{fill} module when it is finished.
     \item fill:
-    Call the Sampling module to write memory to the RAM, and it goes to \textit{draw} module when it is finished. Notice that the status machine detects the status of the filling module at 25Mhz but the filling module itself runs at sampling frequency.
+    Call the Sampling module to write memory to the RAM, and it goes to \textit{draw} module when it is finished. Notice that the state machine detects the state of the filling module at 25Mhz but the filling module itself runs at sampling frequency.
     \item draw:
     Call the drawing module to draw the memory according to the RAM, and it goes to \textit{delay} module when it is finished.
     \item delay:
@@ -589,7 +589,7 @@ It is separated in 4 stages:
 
 
 
-Below is the snapshot code of the status machine:
+Below is the snapshot code of the state machine:
 \begin{lstlisting}[language=Verilog]
 
 always @ (posedge clk)
@@ -746,7 +746,7 @@ Both of the design work, but according to the performance, the last one works be
 Clearly, we can pin out the \textit{trigger} signal and therefor enable the external trigger signal.
 \subsection{PLL}
 
-PLL is used to change the clock, two PLLs are implemented,
+PLLs are used to change the clock,
 
 The first one receive signal from 50Mhz and generate 3 signals. Two for VGA module, which are 25Mhz and 25Mhz with 180 degree shift. One for DA module which is 100Mhz.
 
@@ -810,7 +810,7 @@ Aside from the \textit{verilog HDL} code, there is roughly $1.5\%$ Matlab code.
 \label{sec:correct}
 Because RAM need to read its initialing file, two Matlab files are written, one is to generate the background and another one is to generate wave for DA converter.\\
 
-The one for generating the background, it is able to convert an image into RAM initializing file:
+The one below is for generating the background, it is able to convert an image into RAM initializing file:
 \begin{lstlisting}[language=Matlab]
 function imgscaled = miffilegen(infile, outfname, numrows, numcols)
 %miffilegen('photo.jpg','test.mif',120,160) generate black and white image.
@@ -851,7 +851,7 @@ fclose(fid);
 return
 \end{lstlisting}
 
-The code is modified to be able to generate an image directly from Matlab's array, and the standard background is a 160 * 120 image:
+The code is modified to be able to generate an image directly from Matlab's array for accuracy, and the standard background is a 160 * 120 image shown blow:
 \begin{center}
 \begin{minipage}[t]{\linewidth}
 %\label{fig:main}
@@ -864,7 +864,7 @@ The code is modified to be able to generate an image directly from Matlab's arra
 \medskip
 \end{center}
 
-This one is to write the wave to initialize the RAM:
+This one is to write the wave to initialize the RAM for the signal generator:
 \begin{lstlisting}[language=Matlab]
 function signal_generator(outfname)
 % Depth is 2014, word length is  2^14.
@@ -902,7 +902,7 @@ fprintf(fid,'END;');
 fclose(fid);
 \end{lstlisting}
 
-And to generator .mif file we can simple change the code in function \textit{gen\_y(t)}, below is a example of which:
+And to generate the desired wave we need to define function \textit{gen\_y(t)}, below is an example of which:
 
 \begin{lstlisting}[language=Matlab]
 function y = gen_y(x)
@@ -910,17 +910,18 @@ function y = gen_y(x)
     y = square(x);
 \end{lstlisting}
 
-And the mean time it can calculate the base frequency of the generated wave:
+And at the mean time it can calculate the base frequency of the generated wave:
 \begin{verbatim}
 for length of 1024the frequency is 97656.25
 \end{verbatim}
 
+The real frequency is the base frequency multiples the signal frequency divided by $2\pi$.
+
 
 \subsubsection{Matlab code for doing measurement}
 
-Those two codes enable us to tell the frequency and amplitude based on the output image on the screen and the switch:
+Those two codes enable us to tell the frequency and amplitude based on the output image on the screen and the switches:
 \paragraph{Measuring Frequency}
-
 
 Below is the code for doing so:
 
@@ -958,7 +959,7 @@ Below is a example of usage,
 %\label{fig:main}
 
 {
-\includegraphics[scale = 0.05]{IMG_1388.JPG}
+\includegraphics[scale = 0.1]{meas.png}
 \captionof{figure}{Frequency measurement, reading from switch 14-13 is 01 and reading from switch 12 to 11 is 11. There is around 4.5 waves on the screen.}
 }
 \end{minipage}
@@ -977,7 +978,7 @@ ans =
 
 Because it is the output from the generator at its base frequency, we can get from section \ref{sec:correct} that it is correct.( The correct frequency is at around 97656.25)
 
-A table from this program is also implemented which can be seen from section\ref{sec:fre}
+A table from this program is also implemented which can be seen from section \ref{sec:fre}
 
 \paragraph{Measuring Amplitude}
 Below is the code for doing so:
@@ -1008,18 +1009,33 @@ amp = num*20*2/(2^bitleft);
 It is simply an implementation of the formula below:
 
 $$amp = \frac{20*2*n}{2^{bl}}$$
+
+Below is an exmaple:
 \begin{center}     
 \begin{minipage}[t]{\linewidth}
 %\label{fig:main}
 
 {
-\includegraphics[scale = 0.1]{apr.jpg}
-\captionof{figure}{This is the overall view of the controlling method.}
+\includegraphics[scale = 0.1]{meas.png}
+\captionof{figure}{Amplitude measurement. We used default shift which is 7 bits and the wave roughly occupied 2 grids of the screen.}
 }
 \end{minipage}
 \medskip
 \end{center}
-which can be seen from section\ref{sec:amp}
+
+And if we put in the obtained data into the program, we will get:
+
+\begin{verbatim}
+>> cal_amp('0000',2)
+
+ans =
+
+    0.6250
+\end{verbatim}
+
+Which means the vpp is at around 0.63v.
+
+A table from this program is also implemented which can be seen from section \ref{sec:amp}
 
 \subsubsection{Matlab code for setting up refresh rate}
 \label{sec:refresh}
@@ -1093,11 +1109,11 @@ VGA module is simply the implementation of the module in section \ref{sec:vga}.
 AD module is simply the module from section \ref{sec:adda}. 
 \paragraph{DA module}
 
-DA module is combined in two parts, first it is the module from section \ref{sec:adda}. And then a simple counter is implemented to keep record of the value of the push button. The system will change its output wave according to this value.
+DA module is combined in two parts, first one is the module from section \ref{sec:adda}. And then a simple counter is implemented to keep recording of the value of the push button. The system will change its output wave according to this value.
 
-\subsection{Status Machine Module}
+\subsection{state Machine Module}
 \label{sec:statusm}
-Status machine is combined in 4 parts, which can be seen from section \ref{sec:back}, section \ref{sec:wave}, section \ref{sec:fill}, section \ref{sec:pause}. And the implementation of controlling part is in section \ref{sec:status}. Besides from which, it also has a built in dual port RAM for section \ref{sec:wave} to read and section \ref{sec:fill} to write.
+State machine is combined in 4 parts, which can be seen from section \ref{sec:back}, section \ref{sec:wave}, section \ref{sec:fill} and section \ref{sec:pause}. And the implementation of controlling part is in section \ref{sec:status}. Besides from which, it also has a built in dual port RAM for section \ref{sec:wave} to read and section \ref{sec:fill} to write.
 \subsection{Drawing Background Module}
 This is an implementation of section \ref{sec:coucount}. And it also has a built in RAM which stores the background image.
 \label{sec:back}
@@ -1111,7 +1127,7 @@ This is an implementation of section \ref{sec:bascount} for providing RAM writin
 \label{sec:fill}
 
 \subsection{Pause Module}
-This is an implementation of the section \ref{sec:bascount} to simply cause a delay to scale down the refresh rate. The counter's value is calculated by section \ref{sec:refresh}.
+This is an implementation of the section \ref{sec:bascount} to simply cause a delay to scale down the refresh rate at around 50hz. The counter's value is calculated by section \ref{sec:refresh}.
 \label{sec:pause}
 
 \subsection{Sampling rate switch module}
@@ -1120,21 +1136,21 @@ This module is simply to change its output frequency according to the switches v
 
 \subsection{Resize module}
 
-This module is simply to resize the input by doing bits shift, and the value of which can be found in section \ref{sec:biased}
+This module is simply to resize the input by doing bits shift, and the bias value can be found in section \ref{sec:biased}
 
 \section{Conclusion and potential works}
 
 
 Below is a list of potential works:
 \begin{itemize}
-\item According to \textit{quartus}, my design has used 67\% of the memory and 31\% of pins, total login elements consummation is at around 2\%. Colorful background is not possible due to the restriction of the RAM. But we may can implement a higher resolution.\\
+\item According to \textit{quartus}, my design has used 67\% of the memory and 31\% of pins, total login elements consummation is at around 2\%. Colorful background is not possible due to the restriction of the RAM. But we may can implement the design at a higher resolution.\\
 
 
-\item By implementation more trigger, we will be able to detect the value of the wave by the board itself and we can further exploit the LCD to show the value.\\
+\item By implementation more trigger, we will be able to detect the value of the wave(i.e. frequency, amplitude) by the board itself and we can further exploit the functionality of the LCD to show the value.\\
 
 \item Only one route of the AD is implemented, if time allowing, it is possible to change into two route.\\
 
-\item By pins out the trigger to pin EXT\_CLOCK, we can use external to trigger out plotting.
+\item By pining out the trigger to pin EXT\_CLOCK, we can use external to trigger out plotting.
 \end{itemize}
 
  
@@ -1249,7 +1265,7 @@ switch4-1& one grid & two grid & three grid\\
 
 \subsection{Development History}
 \begin{longtable}{@{\extracolsep{\fill}}lll@{}}
-Writer & data & commit \\
+Writer & Date & Commit \\
 Yingjie & 2015-04-01 & Initial commit \\ \hline
 Yingjie & 2015-04-01 & git ignore \\ \hline
 Yingjie & 2015-04-01 & .gitignore is now working \\ \hline

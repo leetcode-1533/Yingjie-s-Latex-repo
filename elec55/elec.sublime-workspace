@@ -11,15 +11,7 @@
 			"file": "main.tex",
 			"settings":
 			{
-				"buffer_size": 44066,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/Default (OSX).sublime-keymap",
-			"settings":
-			{
-				"buffer_size": 14105,
+				"buffer_size": 44395,
 				"line_ending": "Unix"
 			}
 		}
@@ -76,8 +68,9 @@
 	},
 	"file_history":
 	[
-		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/y1275963/Documents/latex/elec55/main.tex",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/Default (OSX).sublime-keymap",
+		"/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/User/LaTeXTools.sublime-settings",
 		"/Users/y1275963/consistent-trees/read_tree/example.c",
 		"/Users/y1275963/Library/Containers/com.evernote.Evernote/Data/Library/Application Support/com.evernote.Evernote/accounts/www.evernote.com/42464270/external-edits/35BEF86D-E7AA-4035-9956-3704C91C7963/README.md",
 		"/Users/y1275963/Desktop/untitled folder/README",
@@ -119,6 +112,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"status",
+			"Switch 14",
+			"    if now_center-60 > 0\n",
 			"highlight",
 			"hightlight",
 			"theme"
@@ -129,6 +125,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"state"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -147,52 +144,26 @@
 					"file": "main.tex",
 					"settings":
 					{
-						"buffer_size": 44066,
+						"buffer_size": 44395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7267,
-								7267
+								39379,
+								39379
 							]
 						],
 						"settings":
 						{
+							"spell_check": true,
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 23447.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/y1275963/Library/Application Support/Sublime Text 2/Packages/LaTeXTools/Default (OSX).sublime-keymap",
-					"settings":
-					{
-						"buffer_size": 14105,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32,
-								32
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1000.0,
+						"translation.y": 22309.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -202,7 +173,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -237,7 +208,7 @@
 	},
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -260,6 +231,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 111.0,
 	"status_bar_visible": true
 }

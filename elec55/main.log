@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  1 MAY 2015 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  1 MAY 2015 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,53 +503,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-<apr.jpg, id=22, 1284.8pt x 803.0pt>
-File: apr.jpg Graphic file (type jpg)
- <use apr.jpg>
-Package pdftex.def Info: apr.jpg used on input line 118.
-(pdftex.def)             Requested size: 128.48752pt x 80.3047pt.
+<control.JPG, id=22, 3276.24pt x 2457.18pt>
+File: control.JPG Graphic file (type jpg)
+ <use control.JPG>
+Package pdftex.def Info: control.JPG used on input line 118.
+(pdftex.def)             Requested size: 262.10455pt x 196.57841pt.
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 143.
+Package pdftex.def Info: logo.png used on input line 130.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [4 <./apr.jpg>] <IMG_1386.JPG, id=26, 3276.24pt x 2457.18pt>
+
+[4 <./control.JPG>] <IMG_1386.JPG, id=26, 3276.24pt x 2457.18pt>
 File: IMG_1386.JPG Graphic file (type jpg)
- <use IMG_1386.JPG>
+
+<use IMG_1386.JPG>
 Package pdftex.def Info: IMG_1386.JPG used on input line 201.
 (pdftex.def)             Requested size: 163.8216pt x 122.8662pt.
 File: logo.png Graphic file (type png)
-
-<use logo.png>
+ <use logo.png>
 Package pdftex.def Info: logo.png used on input line 206.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [5] <IMG_1387.JPG, id=30, 3276.24pt x 2457.18pt>
+ [5]
+<IMG_1387.JPG, id=30, 3276.24pt x 2457.18pt>
 File: IMG_1387.JPG Graphic file (type jpg)
-
-<use IMG_1387.JPG>
+ <use IMG_1387.JPG>
 Package pdftex.def Info: IMG_1387.JPG used on input line 233.
 (pdftex.def)             Requested size: 327.64319pt x 245.73239pt.
 File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 238.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [6 <./IMG_1386.JPG>]
-<schematic.png, id=34, 855.195pt x 356.33125pt>
+
+[6 <./IMG_1386.JPG>] <schematic.png, id=34, 855.195pt x 356.33125pt>
 File: schematic.png Graphic file (type png)
- <use schematic.png>
+
+<use schematic.png>
 Package pdftex.def Info: schematic.png used on input line 252.
 (pdftex.def)             Requested size: 427.59647pt x 178.16518pt.
-
-<adchar.png, id=35, 745.78625pt x 647.41875pt>
+ <adchar.png, id=35, 745.78625pt x 647.41875pt>
 File: adchar.png Graphic file (type png)
- <use adchar.png>
+
+<use adchar.png>
 Package pdftex.def Info: adchar.png used on input line 266.
 (pdftex.def)             Requested size: 372.89221pt x 323.70857pt.
 File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 271.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
-
-[7 <./IMG_1387.JPG> <./schematic.png>]
+ [7 <./IMG_1387.JPG> <./schematic.png>]
 <dachart.png, id=41, 575.14874pt x 316.18124pt>
 File: dachart.png Graphic file (type png)
  <use dachart.png>
@@ -580,18 +581,18 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 320.
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 340.
+Package pdftex.def Info: logo.png used on input line 341.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
 
 [9]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 400.
+Package pdftex.def Info: logo.png used on input line 405.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [10]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 458.
+Package pdftex.def Info: logo.png used on input line 463.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [11]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 478.
@@ -610,7 +611,7 @@ File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 512.
+Package pdftex.def Info: logo.png used on input line 514.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
 
 [12] <IMG_1389.JPG, id=67, 3276.24pt x 2457.18pt>
@@ -623,15 +624,16 @@ Overfull \hbox (10.95003pt too wide) in paragraph at lines 514--523
 [][]
  []
 
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png used on input line 551.
-(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [13 <./IMG_1389.JPG>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 553.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [13 <./IMG_1389.JPG>]
 <dualram.png, id=72, 890.32625pt x 245.91875pt>
 File: dualram.png Graphic file (type png)
  <use dualram.png>
@@ -654,17 +656,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 601.
+Package pdftex.def Info: logo.png used on input line 605.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [14 <./dualram.png>]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 667.
+Package pdftex.def Info: logo.png used on input line 671.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [15]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 734.
+Package pdftex.def Info: logo.png used on input line 738.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [16]
 Underfull \hbox (badness 10000) in paragraph at lines 744--745
@@ -742,395 +744,404 @@ File: logo.png Graphic file (type png)
 Package pdftex.def Info: logo.png used on input line 911.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [20 <./temp.png (PNG copy)>]
-File: IMG_1388.JPG Graphic file (type jpg)
- <use IMG_1388.JPG>
-Package pdftex.def Info: IMG_1388.JPG used on input line 961.
-(pdftex.def)             Requested size: 163.8216pt x 122.8662pt.
+<meas.png, id=105, 3276.24pt x 2890.8pt>
+File: meas.png Graphic file (type png)
+ <use meas.png>
+Package pdftex.def Info: meas.png used on input line 962.
+(pdftex.def)             Requested size: 327.64319pt x 289.09694pt.
+File: logo.png Graphic file (type png)
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 967.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [21]
 File: logo.png Graphic file (type png)
 
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 969.
+Package pdftex.def Info: logo.png used on input line 998.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [21]
-File: apr.jpg Graphic file (type jpg)
- <use apr.jpg>
-Package pdftex.def Info: apr.jpg used on input line 1016.
-(pdftex.def)             Requested size: 128.48752pt x 80.3047pt.
+ [22 <./meas.png>]
+File: meas.png Graphic file (type png)
+ <use meas.png>
+Package pdftex.def Info: meas.png used on input line 1019.
+(pdftex.def)             Requested size: 327.64319pt x 289.09694pt.
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1027.
-(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [22]
-File: logo.png Graphic file (type png)
- <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1084.
+Package pdftex.def Info: logo.png used on input line 1043.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [23]
 File: logo.png Graphic file (type png)
 
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1125.
+Package pdftex.def Info: logo.png used on input line 1100.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1130--1131
+
+LaTeX Warning: Reference `sec:status' on page 25 undefined on input line 1116.
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1141.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1133--1134
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1135--1136
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1161--1162
 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1153--1153
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1169--1169
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1153--1153
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1169--1169
 []\OT1/cmr/m/n/10.95 00| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (1.74849pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 42187.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 126562.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 210937.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 295312.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1158--1158
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1174--1174
 []\OT1/cmr/m/n/10.95 379687.5| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1163--1163
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1179--1179
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1163--1163
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1179--1179
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 21093.75| 
  []
 
 
-Overfull \hbox (1.74849pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 42187.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 63281.25| 
  []
 
 
-Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 105468.75| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 126562.5| 
  []
 
 
-Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 147656.25| 
  []
 
 
-Overfull \hbox (12.6985pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (12.6985pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 189843.75| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1168--1168
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1184--1184
 []\OT1/cmr/m/n/10.95 210937.5| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 00| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 1012500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 1350000| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 1687500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 2025000| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 2362500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 2700000| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 3037500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1189--1189
 []\OT1/cmr/m/n/10.95 3375000| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 1012500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 1181250| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 1350000| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 1518750| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1178--1178
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1194--1194
 []\OT1/cmr/m/n/10.95 1687500| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1183--1183
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1199--1199
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1183--1183
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1199--1199
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1183--1183
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1199--1199
 []\OT1/cmr/m/n/10.95 1012500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1183--1183
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1199--1199
 []\OT1/cmr/m/n/10.95 1125000| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1204--1204
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1188--1188
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1204--1204
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 00| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 1012500| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 1181250| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 1350000| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 1518750| 
  []
 
 
-Overfull \hbox (4.18182pt too wide) in paragraph at lines 1193--1193
+Overfull \hbox (4.18182pt too wide) in paragraph at lines 1209--1209
 []\OT1/cmr/m/n/10.95 1687500| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1198--1198
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1214--1214
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1198--1198
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1214--1214
 []\OT1/cmr/m/n/10.95 01| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1203--1203
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1219--1219
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1203--1203
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1219--1219
 []\OT1/cmr/m/n/10.95 10| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (2.41411pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (2.41411pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 11| 
  []
 
 
-Overfull \hbox (1.74849pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (1.74849pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 42187.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 126562.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 210937.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 295312.5| 
  []
 
 
-Overfull \hbox (7.2235pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (7.2235pt too wide) in paragraph at lines 1222--1222
 []\OT1/cmr/m/n/10.95 379687.5| 
  []
 
 
-Overfull \hbox (276.02002pt too wide) in paragraph at lines 1148--1208
+Overfull \hbox (276.02002pt too wide) in paragraph at lines 1164--1224
 [][] 
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1247.
+Package pdftex.def Info: logo.png used on input line 1263.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [25]
-Overfull \hbox (99.17543pt too wide) in alignment at lines 1251--1271
+ [26]
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1267--1287
  [] [] [] 
  []
 
 
-Overfull \hbox (99.17543pt too wide) in alignment at lines 1271--1291
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1287--1307
  [] [] [] 
  []
 
 
-Overfull \hbox (99.17543pt too wide) in alignment at lines 1291--1311
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1307--1327
  [] [] [] 
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1311.
+Package pdftex.def Info: logo.png used on input line 1327.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [26]
-Overfull \hbox (99.17543pt too wide) in alignment at lines 1311--1329
+ [27]
+Overfull \hbox (99.17543pt too wide) in alignment at lines 1327--1345
  [] [] [] 
  []
 
@@ -1139,7 +1150,7 @@ File: logo.png Graphic file (type png)
  <use logo.png>
 Package pdftex.def Info: logo.png used on input line 7.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [27]
+ [28]
 Underfull \hbox (badness 10000) in paragraph at lines 17--20
 []\OT1/cmr/m/n/10.95 University of Toronto.  http://www.eecg.utoronto.ca/ ja-ya
 r/ece241[]07f/vga/vga-
@@ -1149,37 +1160,41 @@ r/ece241[]07f/vga/vga-
 AED: lastpage setting LastPage
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1336.
+Package pdftex.def Info: logo.png used on input line 1352.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [28] (./main.aux) ) 
+ [29] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6925 strings out of 493117
- 101769 string characters out of 6135433
- 397868 words of memory out of 5000000
- 10267 multiletter control sequences out of 15000+600000
+ 6930 strings out of 493117
+ 101855 string characters out of 6135433
+ 397885 words of memory out of 5000000
+ 10272 multiletter control sequences out of 15000+600000
  12090 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,17n,51p,645b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-supe
-r/cm-super-ts1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
-bx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
-.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pf
-b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (28 pages, 5484856 bytes).
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
+Output written on main.pdf (29 pages, 18374168 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 186 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

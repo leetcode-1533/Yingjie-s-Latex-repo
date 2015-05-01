@@ -1003,8 +1003,8 @@ switch shift
         fb = 4;
 end
 
-bitleft = 14 - fb;
-amp = num*20*2/(2^bitleft);
+bitleft = 12 - fb;
+amp = (num*20*2)/(2^(bitleft+1)-1);
 \end{lstlisting}
 It is simply an implementation of the formula below:
 
@@ -1026,14 +1026,24 @@ Below is an exmaple:
 And if we put in the obtained data into the program, we will get:
 
 \begin{verbatim}
->> cal_amp('0000',2)
+>> cal_amp('0000', 1.8)
 
 ans =
 
-    0.6250
+    1.1429
 \end{verbatim}
 
-Which means the vpp is at around 0.63v.
+And below is the measurement from the oscilloscope in the lab:
+\begin{center}     
+\begin{minipage}[t]{\linewidth}
+%\label{fig:main}
+
+
+\includegraphics[scale = 0.4]{vpp.png}
+\captionof{figure}{Amplitude real time measurement. Vpp is at around 1v.}
+\end{minipage}
+\medskip
+\end{center}
 
 A table from this program is also implemented which can be seen from section \ref{sec:amp}
 
@@ -1227,38 +1237,38 @@ The first column is for switch 14-13 and the second one is for switch 12-11.\\
 \label{sec:amp}
 \begin{center}
 \begin{tabular}{cccc}
-switch4-1& one grid & two grid & three grid\\
-0000&0.3125&0.625&0.9375\\ \hline
+switch4-1& one grid & two grid & three grid\\ \hline 
+0000&0.63492&1.2698&1.9048\\ \hline
 
 
 
 
-0001&0.625&5&1.875\\ \hline
+0001&1.2903&2.5806&3.871\\ \hline
 
 
 
 
-0010&5&2.5&3.75\\ \hline
+0010&2.6667&5.3333&8\\ \hline
 
 
 
 
-0011&2.5&5&7.5\\ \hline
+0011&5.7143&11.4286&17.1429\\ \hline
 
 
 
 
-0100&0.15625&0.3125&0.46875\\ \hline
+0100&0.31496&0.62992&0.94488\\ \hline
 
 
 
 
-1000&0.078125&0.15625&0.23438\\ \hline
+1000&0.15686&0.31373&0.47059\\ \hline
 
 
 
 
-1100&0.039062&0.078125&0.11719\\ \hline
+1100&0.078278&0.15656&0.23483\\ \hline
 \end{tabular}
 \end{center}
 

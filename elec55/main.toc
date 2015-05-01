@@ -37,13 +37,13 @@
 \contentsline {paragraph}{\nonumberline DA module}{25}
 \contentsline {subsection}{\numberline {4.3}state Machine Module}{25}
 \contentsline {subsection}{\numberline {4.4}Drawing Background Module}{25}
-\contentsline {subsection}{\numberline {4.5}Drawing Wave Module}{25}
-\contentsline {subsection}{\numberline {4.6}Storing AD Data Module}{25}
-\contentsline {subsection}{\numberline {4.7}Pause Module}{25}
-\contentsline {subsection}{\numberline {4.8}Sampling rate switch module}{25}
+\contentsline {subsection}{\numberline {4.5}Drawing Wave Module}{26}
+\contentsline {subsection}{\numberline {4.6}Storing AD Data Module}{26}
+\contentsline {subsection}{\numberline {4.7}Pause Module}{26}
+\contentsline {subsection}{\numberline {4.8}Sampling rate switch module}{26}
 \contentsline {subsection}{\numberline {4.9}Resize module}{26}
 \contentsline {section}{\numberline {5}Conclusion and potential works}{26}
-\contentsline {section}{\numberline {6}Appendix}{26}
-\contentsline {subsection}{\numberline {6.1}Frequency Table}{26}
+\contentsline {section}{\numberline {6}Appendix}{27}
+\contentsline {subsection}{\numberline {6.1}Frequency Table}{27}
 \contentsline {subsection}{\numberline {6.2}Amplitude Table}{27}
 \contentsline {subsection}{\numberline {6.3}Development History}{27}

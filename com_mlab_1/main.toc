@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Laboratory works}{1}
+\contentsline {subsection}{\numberline {1.1}performance analysis}{1}
+\contentsline {subsection}{\numberline {1.2}time domain analysis}{2}
+\contentsline {subsubsection}{\numberline {1.2.1}Binary signal}{2}
+\contentsline {subsubsection}{\numberline {1.2.2}Sampled signal}{3}
+\contentsline {subsubsection}{\numberline {1.2.3}Modulated Signal}{3}
+\contentsline {subsubsection}{\numberline {1.2.4}Received signal}{4}
+\contentsline {subsubsection}{\numberline {1.2.5}Filtered signal}{4}
+\contentsline {subsection}{\numberline {1.3}frequency domain analysis}{5}
+\contentsline {subsubsection}{\numberline {1.3.1}Sampled signal}{5}
+\contentsline {subsubsection}{\numberline {1.3.2}Modulated signal}{6}
+\contentsline {subsubsection}{\numberline {1.3.3}Received signal}{6}
+\contentsline {subsubsection}{\numberline {1.3.4}Filtered signal}{7}
+\contentsline {section}{\numberline {2}Result Analysis}{7}
+\contentsline {subsection}{\numberline {2.1}Question 1}{7}
+\contentsline {subsubsection}{\numberline {2.1.1}What is the effect of the noise?}{7}
+\contentsline {subsubsection}{\numberline {2.1.2}What happened when SNR increases}{7}
+\contentsline {subsubsection}{\numberline {2.1.3}What is the reason behind this performance}{7}
+\contentsline {subsection}{\numberline {2.2}Question 2}{8}
+\contentsline {subsection}{\numberline {2.3}Appendix}{9}
+\contentsline {subsubsection}{\numberline {2.3.1}Matlab code for doing the simulation}{9}
+\contentsline {subsubsection}{\numberline {2.3.2}Matlab code for plotting FFT}{10}

@@ -1,6 +1,5 @@
 \documentclass[11pt]{scrartcl}
 
-\usepackage{cite}
 
 \usepackage{fullpage}
 
@@ -55,7 +54,6 @@
 \tableofcontents
 
 \section{Introduction} % (fold)
-\label{sec:introduction}
 
 This is the descritption of the computer simulation of the digital filter. Matlab code is provided as pseudocode. Overall, using professor's coefficients, a FIR filter was implemented.  
 
@@ -63,7 +61,6 @@ This is the descritption of the computer simulation of the digital filter. Matla
 
 
 \section{Matlab Code} % (fold)
-\label{sec:matlab_code}
 
 Below is the matlab code for filter simulation:
 \begin{lstlisting}[language=Matlab]
@@ -96,13 +93,11 @@ exp = note2(array);
 % section matlab_code (end)
 
 \section{Code Descritption} % (fold)
-\label{sec:code_descritption}
 
 The code above implemented a standard FIR filter, below is an image describing its behaviour:
 
 \begin{center}
 \begin{minipage}[t]{\linewidth}
-%\label{fig:main}
 
 {
 \includegraphics[scale = 1]{fir.png}
@@ -123,15 +118,25 @@ The description goes as the following: we use an array as a length of 19 to cumu
   $$y[n] = \sum^{M}_{i=0}b[i]x[n-i]$$
 \end{enumerate}
 
-And the b[i] is described both in \cite{table} and the matlab code.
+And the b[i] is described both in handout and the matlab code.
 
+An amplitude response figure is drawn given sampling rate is at 2Mhz:
+\begin{center}
+\begin{minipage}[t]{\linewidth}
+\label{fig:test}
+{
+\includegraphics[scale = 0.7]{response.png}
+\label{fig:tk}
 
-Time domain description:
+\captionof{figure}{This is amplitude response. Sampling rate is supposed at 2Mhz.}
+}
+\end{minipage}
+\medskip
+\end{center}
 
-
+As we can see from the figure above, the cutoff frequency is at around 0.2 of sampling rate.
 
 % section code_descritption (end)
 \end{document}
 
-\bibliographystyle{plain}
-\bibliography{bibliography} 
+

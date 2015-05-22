@@ -241,7 +241,7 @@ Below is the supported measuring method to get the data from the board.
       
 \end{itemize}
 
-\subsection{The workflow}
+\subsection{The work flow}
 
 This is the overall schematic chart:
 \begin{center}
@@ -250,7 +250,7 @@ This is the overall schematic chart:
 
 {
 \includegraphics[scale = 0.5]{schematic.png}
-\captionof{figure}{This is the workflow of the oscilloscope.}
+\captionof{figure}{This is the work flow of the oscilloscope.}
 }
 \end{minipage}
 \medskip
@@ -264,7 +264,7 @@ The board will execute two jobs simultaneously, below is the flowchart of the Os
 
 {
 \includegraphics[scale = 0.5]{adchar.png}
-\captionof{figure}{This is the workflow of the oscilloscope.}
+\captionof{figure}{This is the work flow of the oscilloscope.}
 }
 \end{minipage}
 \medskip
@@ -276,7 +276,7 @@ Below is the flowchart of the arbitrary function generator:
 
 {
 \includegraphics[scale = 0.6]{dachart.png}
-\captionof{figure}{This is workflow of the function generator.}
+\captionof{figure}{This is work flow of the function generator.}
 }
 \end{minipage}
 \medskip
@@ -333,9 +333,9 @@ By setting the value of the maximum value of the counter, we can manage to let t
 \subsubsection{Jumping Counter}
 \label{sec:jumcount}
 
-The downsampling is implemented by downsampling the output of the RAM instead of downsampling the output from the AD converter.
+The down sampling is implemented by down sampling the output of the RAM instead of down sampling the output from the AD converter.
 
-To support the downsampling, we simply change the increment factor of the counter and hence we change the RAM address we are going to access, below is an example of the jumping counter:
+To support the down sampling, we simply change the increment factor of the counter and hence we change the RAM address we are going to access, below is an example of the jumping counter:
  
 \begin{lstlisting}[language=Verilog]
 input [1:0] time_division;
@@ -791,7 +791,7 @@ Although it is a different module, but I use it according to this table \cite{vg
 
 \subsubsection{The AD-DA Adaptor Module}
 \label{sec:adda}
-AD-DA adaptor module provide a interface for me to control the AD-DA converter. Below is the snapshot of its schematic design:
+AD-DA adapter module provide a interface for me to control the AD-DA converter. Below is the snapshot of its schematic design:
 
 \begin{minipage}[t]{\linewidth}
 %\label{fig:main}
@@ -1050,7 +1050,7 @@ A table from this program is also implemented which can be seen from section \re
 \subsubsection{Matlab code for setting up refresh rate}
 \label{sec:refresh}
 This code enable us to calculate how much delay is needed to change the refresh rate down to 50hz:
-\begin{lstlisting}[language=Verilog]
+\begin{lstlisting}[language=Matlab]
 x = 160;
 y = 120;
 f = 25*10^6;
@@ -1133,7 +1133,7 @@ This is an implementation \ref{sec:vgasinv} of section \ref{sec:bascount} for pr
 \label{sec:wave}
 
 \subsection{Storing AD Data Module}
-This is an implementation \ref{sec:ramfilllv} of section \ref{sec:bascount} for providing RAM writing address and an implementation of section \ref{sec:trigger} for supporting triggering and an implementation of section \ref{sec:duram} for section \ref{sec:statusm} to detects its behaviour in reading cycle.
+This is an implementation \ref{sec:ramfilllv} of section \ref{sec:bascount} for providing RAM writing address and an implementation of section \ref{sec:trigger} for supporting triggering and an implementation of section \ref{sec:duram} for section \ref{sec:statusm} to detects its behavior in reading cycle.
 \label{sec:fill}
 
 \subsection{Pause Module}
@@ -1150,7 +1150,7 @@ This module \ref{sec:modisignv} is simply to resize the input by doing bits shif
 
 \section{Conclusion and potential works}
 
-For this project I learnt the advantage and constraints of the FPGA developement. The advantage is the FPGA is not programming and by natrual it is in parallel. But due to it is a description of the connitivity of the hardware rather than an explicit description of human login the implementation of an algorithm generaly is harder than a modern programming language. 
+For this project I learnt the advantage and constraints of the FPGA development. The advantage is the FPGA is not programming and by natural it is in parallel. But due to it is a description of the connectivity of the hardware rather than an explicit description of human login the implementation of an algorithm general is harder than a modern programming language. 
 
 Below is a list of potential works:
 \begin{itemize}

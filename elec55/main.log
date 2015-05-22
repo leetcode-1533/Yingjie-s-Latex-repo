@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  2 MAY 2015 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 MAY 2015 10:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,16 +803,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1164--1165
 
  []
 
-
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png used on input line 1167.
+(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
+ [26]
 Underfull \hbox (badness 10000) in paragraph at lines 1174--1175
 
  []
 
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png used on input line 1176.
-(pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
- [26]
+
 Overfull \hbox (2.41411pt too wide) in paragraph at lines 1182--1182
 []\OT1/cmr/m/n/10.95 10| 
  []
@@ -1158,39 +1158,39 @@ Package pdftex.def Info: logo.png used on input line 1358.
  [28]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1398.
+Package pdftex.def Info: logo.png used on input line 1394.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [29]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1463.
+Package pdftex.def Info: logo.png used on input line 1462.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [30]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1530.
+Package pdftex.def Info: logo.png used on input line 1527.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
 
 [31]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1597.
+Package pdftex.def Info: logo.png used on input line 1594.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [32]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1665.
+Package pdftex.def Info: logo.png used on input line 1664.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [33]
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1734.
+Package pdftex.def Info: logo.png used on input line 1728.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [34]
 File: logo.png Graphic file (type png)
 
 <use logo.png>
-Package pdftex.def Info: logo.png used on input line 1800.
+Package pdftex.def Info: logo.png used on input line 1798.
 (pdftex.def)             Requested size: 94.67346pt x 33.48502pt.
  [35]
 File: logo.png Graphic file (type png)
@@ -1226,10 +1226,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 7002 strings out of 493117
- 102743 string characters out of 6135433
- 460989 words of memory out of 5000000
- 10343 multiletter control sequences out of 15000+600000
+ 6991 strings out of 493117
+ 102646 string characters out of 6135433
+ 446989 words of memory out of 5000000
+ 10332 multiletter control sequences out of 15000+600000
  12090 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,17n,51p,645b,1740s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1249,7 +1249,7 @@ xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb>
-Output written on main.pdf (39 pages, 18877784 bytes).
+Output written on main.pdf (39 pages, 18878055 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams

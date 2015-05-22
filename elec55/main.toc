@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {2.1}Board Details}{4}
 \contentsline {subsection}{\numberline {2.2}The controlling method}{4}
 \contentsline {subsection}{\numberline {2.3}The measuring method}{5}
-\contentsline {subsection}{\numberline {2.4}The workflow}{7}
+\contentsline {subsection}{\numberline {2.4}The work flow}{7}
 \contentsline {section}{\numberline {3}Implementation Details}{9}
 \contentsline {subsection}{\numberline {3.1}The Counter}{9}
 \contentsline {subsubsection}{\numberline {3.1.1}The basic Counter}{9}
@@ -50,8 +50,8 @@
 \contentsline {subsection}{\numberline {6.4}Full Source Code}{29}
 \contentsline {subsubsection}{\numberline {6.4.1}clear.v}{29}
 \contentsline {subsubsection}{\numberline {6.4.2}delay.v}{30}
-\contentsline {subsubsection}{\numberline {6.4.3}display\_state.v}{30}
-\contentsline {subsubsection}{\numberline {6.4.4}modisign.v}{33}
+\contentsline {subsubsection}{\numberline {6.4.3}display\_state.v}{31}
+\contentsline {subsubsection}{\numberline {6.4.4}modisign.v}{34}
 \contentsline {subsubsection}{\numberline {6.4.5}ramfill.v}{34}
 \contentsline {subsubsection}{\numberline {6.4.6}vga\_sin.v}{36}
 \contentsline {subsubsection}{\numberline {6.4.7}sel\_clk.v}{37}

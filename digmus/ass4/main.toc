@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Frequency responses of woofer and tweeter}{1}
+\contentsline {subsection}{\numberline {1.1}Experiment setup}{1}
+\contentsline {subsection}{\numberline {1.2}Experiment condition}{2}
+\contentsline {subsection}{\numberline {1.3}Results}{2}
+\contentsline {section}{\numberline {2}Design of the filter}{2}
+\contentsline {paragraph}{\nonumberline low pass filter}{2}
+\contentsline {paragraph}{\nonumberline high pass filter}{3}
+\contentsline {subsection}{\numberline {2.1}Requirements for the filter}{3}
+\contentsline {subsection}{\numberline {2.2}The implementation filter}{4}
+\contentsline {subsection}{\numberline {2.3}The simulation result of the filter}{4}
+\contentsline {subsection}{\numberline {2.4}The practical result of the filter}{6}
+\contentsline {section}{\numberline {3}Comparison of the two speakers}{9}
